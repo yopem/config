@@ -1,0 +1,9 @@
+{
+  "name": "@yopem/typescript-config",
+  "version": "0.0.1",
+  "exports": {
+		".": "./base.json",
+		"./base": "./base.json",
+		"./nextjs": "./nextjs.json",
+		"./react": "./react.json"
+	}}
