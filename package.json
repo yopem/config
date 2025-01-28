@@ -18,16 +18,23 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "postinstall": "lefthook install",
-    "typecheck": "turbo typecheck"
+    "release": "changeset publish",
+    "release:dev": "changeset publish --tag dev",
+    "typecheck": "turbo typecheck",
+    "version:dev": "changeset version --snapshot dev",
+    "version:set": "changeset version"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.12",
+    "@changesets/get-release-plan": "4.0.6",
+    "@changesets/types": "6.0.0",
     "@yopem/eslint-config": "workspace:*",
     "@yopem/prettier-config": "workspace:*",
     "eslint": "9.19.0",
     "jsr": "0.13.3",
     "lefthook": "1.10.10",
     "prettier": "3.4.2",
-    "release-it": "18.1.2",
     "turbo": "2.3.4",
     "typescript": "5.7.3"
   },
