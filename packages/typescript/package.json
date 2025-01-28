@@ -1,0 +1,23 @@
+{
+  "name": "@yopem/typescript-config",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "typescript",
+    "typescript-config",
+    "tooling"
+  ],
+  "type": "module",
+  "files": ["*.json"],
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/tooling.git",
+    "directory": "packages/tooling/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/yopem/tooling/issues"
+  }
+}
