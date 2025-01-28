@@ -1,6 +1,5 @@
 {
   "name": "@yopem/eslint-config",
-  "private": true,
   "version": "0.0.1",
   "description": "",
   "keywords": [
@@ -40,6 +39,9 @@
     }
   },
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Karyana Yandi <karyana@yandi.me>",
   "license": "MIT",
   "repository": {
