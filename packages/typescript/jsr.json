@@ -6,4 +6,5 @@
 		"./base": "./base.json",
 		"./nextjs": "./nextjs.json",
 		"./react": "./react.json"
-	}}
+	}
+}
