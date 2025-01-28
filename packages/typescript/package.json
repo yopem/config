@@ -8,7 +8,23 @@
     "tooling"
   ],
   "type": "module",
-  "files": ["*.json"],
+  "exports": {
+    "./base": {
+      "types": "./src/base.json",
+      "import": "./src/base.json",
+      "require": "./src/base.json"
+    },
+    "./nextjs": {
+      "types": "./src/nextjs.json",
+      "import": "./src/nextjs.json",
+      "require": "./src/nextjs.json"
+    },
+    "./react": {
+      "types": "./src/react.json",
+      "import": "./src/react.json",
+      "require": "./src/react.json"
+    }
+  },
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
