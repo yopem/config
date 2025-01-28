@@ -41,5 +41,9 @@
   },
   "scripts": {
     "release-it": "release-it --config ../../release-it.json"
+  },
+  "devDependencies": {
+    "@release-it/keep-a-changelog": "6.0.0",
+    "release-it": "18.1.2"
   }
 }
