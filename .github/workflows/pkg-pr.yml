@@ -17,7 +17,4 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build
-        run: bun run build
-
       - run: bunx pkg-pr-new publish './packages/*'
