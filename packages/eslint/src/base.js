@@ -39,7 +39,7 @@ export const restrictEnvAccess = tseslint.config(
 export default tseslint.config(
   includeIgnoreFile(path.join(import.meta.dirname, "../../../.gitignore")),
   { ignores: ["**/*.config.*"] },
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   {
@@ -74,10 +74,12 @@ export default tseslint.config(
           allowConstantLoopConditions: true,
         },
       ],
-      "@typescript-eslint/no-non-null-assertion": "error",
-      "@typescript-eslint/no-empty-object-type": "off",
-      "@typescript-eslint/unbound-method": "off",
       "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-non-null-assertion": "error",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/unbound-method": "off",
       "import/consistent-type-specifier-style": ["off"],
     },
   },
