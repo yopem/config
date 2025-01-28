@@ -46,9 +46,6 @@ jobs:
       - name: Install Dependencies
         run: bun install
 
-      - name: Build
-        run: bun ${{ github.event.inputs.package }} build
-
       - name: Create Pre-Release
         if: github.event.inputs.preRelease == 'create'
         run: bun ${{ github.event.inputs.package }} release-it ${{ github.event.inputs.increment }} --preRelease=beta --ci
