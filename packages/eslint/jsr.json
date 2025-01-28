@@ -1,0 +1,14 @@
+{
+  "name": "@yopem/eslint-config",
+  "version": "0.0.1",
+  "exports": {
+    "./base": "./src/base.js",
+    "./nextjs": "./src/nextjs.js",
+    "./react": "./src/react.js",
+    "./tailwindcss": "./src/tailwindcss.js"
+  },
+  "publish": {
+    "include": ["src/**/*.js", "src/**/*.ts", "README.md"],
+    "exclude": ["src/**/*.test.ts", "src/**/*.test-d.ts", "src/vitest/**/*.ts"]
+  }
+}
