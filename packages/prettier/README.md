@@ -4,6 +4,8 @@ Yopem Prettier configuration.
 
 ## Installation
 
+### NPM
+
 ```sh
 npm install @yopem/prettier-config
 # or
@@ -12,8 +14,20 @@ pnpm add @yopem/prettier-config
 yarn add @yopem/prettier-config
 # or
 bun add @yopem/prettier-config
+```
+
+### JSR
+
+```sh
+deno add jsr:@yopem/prettier-config
 # or
-deno install npm:@yopem/prettier-config
+npx jsr add @yopem/prettier-config
+# or
+pnpm dlx jsr add @yopem/prettier-config
+# or
+yarn dlx jsr add @yopem/prettier-config
+# or
+bunx jsr add @yopem/prettier-config
 ```
 
 ## Licence
