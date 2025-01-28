@@ -13,11 +13,11 @@
   "license": "MIT",
   "scripts": {
     "clean:deps": "bun exec git clean -xdf node_modules",
-    "format:fix": "prettier --write \"**/*.{ts,tsx,mjs,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,mjs,md}\"",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,mjs,md}\"",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "release": "release-it",
+    "postinstall": "lefthook install",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
