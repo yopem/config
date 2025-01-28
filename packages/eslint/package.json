@@ -55,6 +55,7 @@
   "scripts": {
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
+    "release-it": "release-it --config ../../release-it.json",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

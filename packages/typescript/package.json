@@ -22,5 +22,8 @@
   },
   "bugs": {
     "url": "https://github.com/yopem/tooling/issues"
+  },
+  "scripts": {
+    "release-it": "release-it --config ../../release-it.json"
   }
 }
