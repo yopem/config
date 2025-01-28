@@ -1,0 +1,8 @@
+{
+  "name": "@yopem/prettier-config",
+  "version": "0.0.1",
+  "exports": {
+    "./base": "./src/base.js",
+    "./react": "./src/react.js"
+  }
+}
