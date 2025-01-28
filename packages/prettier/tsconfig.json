@@ -1,5 +1,5 @@
 {
-  "extends": "@yopem/typescript-config/base.json",
+  "extends": "@yopem/typescript-config/base",
   "include": ["src"],
   "exclude": ["node_modules"]
 }
