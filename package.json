@@ -24,6 +24,7 @@
     "@yopem/eslint-config": "workspace:*",
     "@yopem/prettier-config": "workspace:*",
     "eslint": "9.19.0",
+    "jsr": "0.13.3",
     "lefthook": "1.10.10",
     "prettier": "3.4.2",
     "release-it": "18.1.2",
