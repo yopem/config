@@ -1,0 +1,83 @@
+{
+  "name": "@yopem/eslint-config",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "tooling"
+  ],
+  "type": "module",
+  "exports": {
+    "./base": {
+      "source": "./src/base.js",
+      "import": {
+        "types": "./src/types.d.ts",
+        "default": "./src/base.js"
+      }
+    },
+    "./nextjs": {
+      "source": "./src/nextjs.js",
+      "import": {
+        "types": "./src/types.d.ts",
+        "default": "./src/nextjs.js"
+      }
+    },
+    "./react": {
+      "source": "./src/react.js",
+      "import": {
+        "types": "./src/types.d.ts",
+        "default": "./src/react.js"
+      }
+    },
+    "./tailwindcss": {
+      "source": "./src/tailwindcss.js",
+      "import": {
+        "types": "./src/types.d.ts",
+        "default": "./src/tailwindcss.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yopem/tooling",
+    "directory": "packages/tooling/eslint"
+  },
+  "bugs": {
+    "url": "https://github.com/yopem/tooling/issues"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eslint/compat": "1.2.5",
+    "@eslint/js": "9.19.0",
+    "@next/eslint-plugin-next": "15.1.6",
+    "eslint": "9.19.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.2.3",
+    "eslint-plugin-react": "7.37.4",
+    "eslint-plugin-react-hooks": "5.1.0",
+    "eslint-plugin-tailwindcss": "3.18.0",
+    "eslint-plugin-turbo": "2.3.4",
+    "typescript-eslint": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "8.42.3",
+    "@yopem/prettier-config": "workspace:*",
+    "@yopem/typescript-config": "workspace:*",
+    "prettier": "3.4.2",
+    "typescript": "5.7.3"
+  },
+  "prettier": "@yopem/prettier-config/base"
+}

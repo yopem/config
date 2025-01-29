@@ -1,0 +1,45 @@
+{
+  "name": "tooling",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/tooling.git"
+  },
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "license": "MIT",
+  "scripts": {
+    "clean:deps": "bun exec git clean -xdf node_modules",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mjs,md}\"",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,mjs,md}\"",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "postinstall": "lefthook install",
+    "release": "changeset publish",
+    "release:dev": "changeset publish --tag dev",
+    "typecheck": "turbo typecheck",
+    "version:dev": "changeset version --snapshot dev",
+    "version:set": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.12",
+    "@changesets/get-release-plan": "4.0.6",
+    "@changesets/types": "6.0.0",
+    "@yopem/eslint-config": "workspace:*",
+    "@yopem/prettier-config": "workspace:*",
+    "eslint": "9.19.0",
+    "lefthook": "1.10.10",
+    "prettier": "3.4.2",
+    "turbo": "2.3.4",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "bun@1.2.0",
+  "prettier": "@yopem/prettier-config/base"
+}

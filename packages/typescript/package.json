@@ -1,0 +1,42 @@
+{
+  "name": "@yopem/typescript-config",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "typescript",
+    "typescript-config",
+    "tooling"
+  ],
+  "type": "module",
+  "exports": {
+    "./base": {
+      "types": "./src/base.json",
+      "import": "./src/base.json",
+      "require": "./src/base.json"
+    },
+    "./nextjs": {
+      "types": "./src/nextjs.json",
+      "import": "./src/nextjs.json",
+      "require": "./src/nextjs.json"
+    },
+    "./react": {
+      "types": "./src/react.json",
+      "import": "./src/react.json",
+      "require": "./src/react.json"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/tooling.git",
+    "directory": "packages/tooling/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/yopem/tooling/issues"
+  }
+}

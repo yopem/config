@@ -1,0 +1,1 @@
+# @yopem/eslint-config
