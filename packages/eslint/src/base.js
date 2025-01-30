@@ -81,6 +81,17 @@ export default tseslint.config(
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/unbound-method": "off",
       "import/consistent-type-specifier-style": ["off"],
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["../"],
+              message: `Relative imports are not allowed. Please use '@/' instead.`,
+            },
+          ],
+        },
+      ],
     },
   },
   {
