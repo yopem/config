@@ -12,7 +12,7 @@
   "author": "Karyana Yandi <karyana@yandi.me>",
   "license": "MIT",
   "scripts": {
-    "clean:deps": "bun exec git clean -xdf node_modules",
+    "clean:deps": "git clean -xdf node_modules",
     "format:check": "prettier --check \"**/*.{ts,tsx,mjs,md}\"",
     "format:fix": "prettier --write \"**/*.{ts,tsx,mjs,md}\"",
     "lint": "turbo lint",
