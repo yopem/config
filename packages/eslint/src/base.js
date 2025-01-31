@@ -1,6 +1,8 @@
 /// <reference types="./types.d.ts" />
 
-import * as path from "node:path"
+import fs from "fs"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
 import { includeIgnoreFile } from "@eslint/compat"
 import eslint from "@eslint/js"
 import eslintConfigPrettier from "eslint-config-prettier"
@@ -9,35 +11,12 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import turboPlugin from "eslint-plugin-turbo"
 import tseslint from "typescript-eslint"
 
-export const restrictEnvAccess = tseslint.config(
-  { ignores: ["**/env.ts"] },
-  {
-    files: ["**/*.js", "**/*.ts", "**/*.tsx"],
-    rules: {
-      "no-restricted-properties": [
-        "error",
-        {
-          object: "process",
-          property: "env",
-          message:
-            "Use `import env from '@/env'` instead to ensure validated types.",
-        },
-      ],
-      "no-restricted-imports": [
-        "error",
-        {
-          name: "process",
-          importNames: ["env"],
-          message:
-            "Use `import env from '@/env'` instead to ensure validated types.",
-        },
-      ],
-    },
-  },
-)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const gitignorePath = path.resolve(__dirname, ".gitignore")
 
 export default tseslint.config(
-  includeIgnoreFile(path.join(import.meta.dirname, "../../../.gitignore")),
+  fs.existsSync(gitignorePath) && includeIgnoreFile(gitignorePath),
   { ignores: ["**/*.config.*"] },
 
   eslintConfigPrettier,
@@ -77,6 +56,7 @@ export default tseslint.config(
       "@typescript-eslint/ban-ts-comment": "off",
       "@typescript-eslint/no-non-null-assertion": "error",
       "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-call": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/unbound-method": "off",
@@ -97,5 +77,32 @@ export default tseslint.config(
   {
     linterOptions: { reportUnusedDisableDirectives: true },
     languageOptions: { parserOptions: { projectService: true } },
+  },
+)
+
+export const restrictEnvAccess = tseslint.config(
+  { ignores: ["**/env.ts"] },
+  {
+    files: ["**/*.js", "**/*.ts", "**/*.tsx"],
+    rules: {
+      "no-restricted-properties": [
+        "error",
+        {
+          object: "process",
+          property: "env",
+          message:
+            "Use `import env from '@/env'` instead to ensure validated types.",
+        },
+      ],
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "process",
+          importNames: ["env"],
+          message:
+            "Use `import env from '@/env'` instead to ensure validated types.",
+        },
+      ],
+    },
   },
 )
