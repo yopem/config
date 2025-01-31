@@ -47,7 +47,7 @@
     "prettier-plugin-tailwindcss": "0.6.11"
   },
   "devDependencies": {
-    "@yopem/typescript-config": "workspace:*",
+    "@yopem/typescript-config": "*",
     "typescript": "5.7.3"
   },
   "prettier": "@yopem/prettier-config/base"
