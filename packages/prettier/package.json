@@ -9,8 +9,20 @@
   ],
   "type": "module",
   "exports": {
-    "./base": "./src/base.js",
-    "./react": "./src/react.js"
+    "./base": {
+      "source": "./src/base.js",
+      "import": {
+        "types": "./src/base.js",
+        "default": "./src/base.js"
+      }
+    },
+    "./react": {
+      "source": "./src/react.js",
+      "import": {
+        "types": "./src/react.js",
+        "default": "./src/react.js"
+      }
+    }
   },
   "sideEffects": false,
   "publishConfig": {
