@@ -8,6 +8,12 @@
     "tooling"
   ],
   "type": "module",
+  "main": "src/base.js",
+  "module": "src/base.js",
+  "types": "src/types.d.ts",
+  "files": [
+    "src"
+  ],
   "exports": {
     "./base": {
       "source": "./src/base.js",
@@ -36,7 +42,8 @@
         "types": "./src/types.d.ts",
         "default": "./src/tailwindcss.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "sideEffects": false,
   "publishConfig": {

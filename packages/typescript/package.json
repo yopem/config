@@ -8,6 +8,12 @@
     "tooling"
   ],
   "type": "module",
+  "main": "src/base.json",
+  "module": "src/base.json",
+  "types": "src/base.json",
+  "files": [
+    "src"
+  ],
   "exports": {
     "./base": {
       "types": "./src/base.json",
@@ -23,7 +29,8 @@
       "types": "./src/react.json",
       "import": "./src/react.json",
       "require": "./src/react.json"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "sideEffects": false,
   "publishConfig": {

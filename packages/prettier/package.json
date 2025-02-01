@@ -8,6 +8,12 @@
     "tooling"
   ],
   "type": "module",
+  "main": "src/base.js",
+  "module": "src/base.js",
+  "types": "src/base.js",
+  "files": [
+    "src"
+  ],
   "exports": {
     "./base": {
       "source": "./src/base.js",
@@ -22,7 +28,8 @@
         "types": "./src/react.js",
         "default": "./src/react.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "sideEffects": false,
   "publishConfig": {
