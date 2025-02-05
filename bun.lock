@@ -19,7 +19,7 @@
     },
     "packages/eslint": {
       "name": "@yopem/eslint-config",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
         "@eslint/compat": "1.2.5",
         "@eslint/js": "9.19.0",
@@ -33,7 +33,7 @@
         "eslint-plugin-react": "7.37.4",
         "eslint-plugin-react-hooks": "5.1.0",
         "eslint-plugin-tailwindcss": "3.18.0",
-        "eslint-plugin-turbo": "2.3.4",
+        "eslint-plugin-turbo": "2.4.0",
         "typescript-eslint": "8.22.0",
       },
       "devDependencies": {
@@ -376,7 +376,7 @@
 
     "eslint-plugin-tailwindcss": ["eslint-plugin-tailwindcss@3.18.0", "", { "dependencies": { "fast-glob": "^3.2.5", "postcss": "^8.4.4" }, "peerDependencies": { "tailwindcss": "^3.4.0" } }, "sha512-PQDU4ZMzFH0eb2DrfHPpbgo87Zgg2EXSMOj1NSfzdZm+aJzpuwGerfowMIaVehSREEa0idbf/eoNYAOHSJoDAQ=="],
 
-    "eslint-plugin-turbo": ["eslint-plugin-turbo@2.3.4", "", { "dependencies": { "dotenv": "16.0.3" }, "peerDependencies": { "eslint": ">6.6.0", "turbo": ">2.0.0" } }, "sha512-9ncoUJkQGkC28NmlQiS17oB9mrE8XaSulRZiB5pv9vmRbYjOfUwyGhY3EIcoBRdww81igxOzXmAmvNNd6GFBPg=="],
+    "eslint-plugin-turbo": ["eslint-plugin-turbo@2.4.0", "", { "dependencies": { "dotenv": "16.0.3" }, "peerDependencies": { "eslint": ">6.6.0", "turbo": ">2.0.0" } }, "sha512-qCgoRi/OTc1VMxab7+sdKiV1xlkY4qjK9sM+kS7+WogrB1DxLguJSQXvk4HA13SD5VmJsq+8FYOw5q4EUk6Ixg=="],
 
     "eslint-scope": ["eslint-scope@8.2.0", "", { "dependencies": { "esrecurse": "^4.3.0", "estraverse": "^5.2.0" } }, "sha512-PHlWUfG6lvPc3yvP5A4PNyBL1W8fkDUccmI21JUu/+GKZBoH/W5u6usENXUrWFRsyoW5ACUjFGgAFQp5gUlb/A=="],
 
