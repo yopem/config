@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "git clean -xdf dist .cache .turbo .next *.log",
     "clean:all": "bun clean && bun clean:deps",
-     "clean:deps": "git clean -xdf node_modules",
+    "clean:deps": "git clean -xdf node_modules",
     "format:check": "prettier --check \"**/*.{ts,tsx,mjs,md}\"",
     "format:fix": "prettier --write \"**/*.{ts,tsx,mjs,md}\"",
     "lint": "turbo lint",
@@ -23,8 +23,8 @@
     "release": "changeset publish",
     "release:dev": "changeset publish --tag dev",
     "typecheck": "turbo typecheck",
-    "version:dev": "changeset version --snapshot dev",
-    "version:set": "changeset version"
+    "version": "changeset version",
+    "version:dev": "changeset version --snapshot dev"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.5.0",
