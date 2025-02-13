@@ -19,7 +19,7 @@
     },
     "packages/eslint": {
       "name": "@yopem/eslint-config",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "dependencies": {
         "@eslint/compat": "1.2.6",
         "@eslint/js": "9.20.0",
@@ -33,7 +33,7 @@
         "eslint-plugin-react": "7.37.4",
         "eslint-plugin-react-hooks": "5.1.0",
         "eslint-plugin-tailwindcss": "3.18.0",
-        "eslint-plugin-turbo": "2.4.1",
+        "eslint-plugin-turbo": "2.4.2",
         "typescript-eslint": "8.24.0",
       },
       "devDependencies": {
@@ -43,15 +43,15 @@
     },
     "packages/prettier": {
       "name": "@yopem/prettier-config",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
-        "@ianvs/prettier-plugin-sort-imports": "latest",
-        "prettier": "latest",
-        "prettier-plugin-tailwindcss": "latest",
+        "@ianvs/prettier-plugin-sort-imports": "4.4.1",
+        "prettier": "3.5.0",
+        "prettier-plugin-tailwindcss": "0.6.11",
       },
       "devDependencies": {
         "@yopem/typescript-config": "workspace:*",
-        "typescript": "latest",
+        "typescript": "5.7.3",
       },
     },
     "packages/typescript": {
@@ -376,7 +376,7 @@
 
     "eslint-plugin-tailwindcss": ["eslint-plugin-tailwindcss@3.18.0", "", { "dependencies": { "fast-glob": "^3.2.5", "postcss": "^8.4.4" }, "peerDependencies": { "tailwindcss": "^3.4.0" } }, "sha512-PQDU4ZMzFH0eb2DrfHPpbgo87Zgg2EXSMOj1NSfzdZm+aJzpuwGerfowMIaVehSREEa0idbf/eoNYAOHSJoDAQ=="],
 
-    "eslint-plugin-turbo": ["eslint-plugin-turbo@2.4.1", "", { "dependencies": { "dotenv": "16.0.3" }, "peerDependencies": { "eslint": ">6.6.0", "turbo": ">2.0.0" } }, "sha512-sTJZrgn7G1rF7RHZcj367g2cT0+E5v0lt9LD+nBpTnCyDA/yB0PwSm/QM+aXQ39vxuK9sqlUL2LyPXyGFvUXsg=="],
+    "eslint-plugin-turbo": ["eslint-plugin-turbo@2.4.2", "", { "dependencies": { "dotenv": "16.0.3" }, "peerDependencies": { "eslint": ">6.6.0", "turbo": ">2.0.0" } }, "sha512-67IZtvOFaWDnUmYMV3luRIE1kqL+ok5MxPEsIPUqH2vQggML7jmZFZx/P9jhXAoFH+pViEz5QEzDa2DBLHqzQg=="],
 
     "eslint-scope": ["eslint-scope@8.2.0", "", { "dependencies": { "esrecurse": "^4.3.0", "estraverse": "^5.2.0" } }, "sha512-PHlWUfG6lvPc3yvP5A4PNyBL1W8fkDUccmI21JUu/+GKZBoH/W5u6usENXUrWFRsyoW5ACUjFGgAFQp5gUlb/A=="],
 
