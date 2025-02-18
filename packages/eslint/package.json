@@ -36,13 +36,6 @@
         "default": "./src/react.js"
       }
     },
-    "./tailwindcss": {
-      "source": "./src/tailwindcss.js",
-      "import": {
-        "types": "./src/types.d.ts",
-        "default": "./src/tailwindcss.js"
-      }
-    },
     "./package.json": "./package.json"
   },
   "sideEffects": false,
@@ -76,7 +69,6 @@
     "eslint-plugin-prettier": "5.2.3",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.1.0",
-    "eslint-plugin-tailwindcss": "3.18.0",
     "eslint-plugin-turbo": "2.4.2",
     "typescript-eslint": "8.24.0"
   },

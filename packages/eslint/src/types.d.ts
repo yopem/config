@@ -37,26 +37,6 @@ declare module "eslint-plugin-react-hooks" {
   export const rules: Record<string, Rule.RuleModule>
 }
 
-declare module "eslint-plugin-tailwindcss" {
-  import type { Linter, Rule } from "eslint"
-
-  export const configs: {
-    recommended: {
-      rules: {
-        "classnames-order": Linter.RuleEntry
-        "enforces-negative-arbitrary-values": Linter.RuleEntry
-        "enforces-shorthand": Linter.RuleEntry
-        "migration-from-tailwind-2": Linter.RuleEntry
-        "no-arbitrary-value": Linter.RuleEntry
-        "no-contradicting-classname": Linter.RuleEntry
-        "no-custom-classname": Linter.RuleEntry
-        "no-unnecessary-arbitrary-value": Linter.RuleEntry
-      }
-    }
-  }
-  export const rules: Record<string, Rule.RuleModule>
-}
-
 declare module "@next/eslint-plugin-next" {
   import type { Linter, Rule } from "eslint"
 
