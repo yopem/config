@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.1.3
+
+### Patch Changes
+
+- [`f1e97af`](https://github.com/yopem/tooling/commit/f1e97af56ba714ea7aa737d3b4409bdc096e9647)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(deps): remove
+  eslint-plugin-tailwindcss
+
 ## 0.1.2
 
 ### Patch Changes
