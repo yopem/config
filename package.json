@@ -42,6 +42,6 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "bun@1.2.1",
+  "packageManager": "bun@1.2.3",
   "prettier": "@yopem/prettier-config/base"
 }
