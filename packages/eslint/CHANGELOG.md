@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.1.4
+
+### Patch Changes
+
+- [`dabd250`](https://github.com/yopem/tooling/commit/dabd2502ff436cf94c4367e60f1ce0a5ec41f199)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - Replace
+  @types/eslint\_\_js with @types/eslint package to align with correct
+
 ## 0.1.3
 
 ### Patch Changes
