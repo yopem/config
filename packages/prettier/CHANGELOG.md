@@ -1,5 +1,16 @@
 # @yopem/prettier-config
 
+## 0.1.2
+
+### Patch Changes
+
+- [`1fbad2a`](https://github.com/yopem/tooling/commit/1fbad2a1d6ce0edc36e31605ebabc5454ac6e718)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(prettier): add
+  peer dependencies
+
+  Add explicit peer dependencies for prettier and import sort plugin to ensure
+  consistent versioning across projects using this package.
+
 ## 0.1.1
 
 ### Patch Changes
