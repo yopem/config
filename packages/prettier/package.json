@@ -56,5 +56,9 @@
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
     "typescript": "5.7.3"
+  },
+  "peerDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.4.1",
+    "prettier": "3.5.2"
   }
 }
