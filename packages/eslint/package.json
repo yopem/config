@@ -74,6 +74,18 @@
   },
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
+    "eslint-plugin-turbo": "2.4.4",
     "typescript": "5.7.3"
+  },
+  "peerDependencies": {
+    "@eslint/compat": "1.2.7",
+    "@eslint/js": "9.21.0",
+    "@types/eslint": "9.6.1",
+    "eslint": "9.21.0",
+    "eslint-config-prettier": "10.0.2",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.2.3",
+    "typescript-eslint": "8.25.0"
   }
 }
