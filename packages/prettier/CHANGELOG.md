@@ -1,5 +1,13 @@
 # @yopem/prettier-config
 
+## 0.1.3
+
+### Patch Changes
+
+- [`5fa853f`](https://github.com/yopem/tooling/commit/5fa853f7f2007dfc53a0fdb4bc9e417d2a4ad77d)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(packages): add
+  tailwindcss plugin to prettier deps
+
 ## 0.1.2
 
 ### Patch Changes
