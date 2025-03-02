@@ -1,5 +1,21 @@
 # @yopem/eslint-config
 
+## 0.1.6
+
+### Patch Changes
+
+- [`81df8a6`](https://github.com/yopem/tooling/commit/81df8a6a55bd4a972456f0648dc8f7a5ff3733a6)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint): add
+  eslint-config-next for improved Next.js linting
+
+  Adds the official eslint-config-next package which provides specialized
+  linting rules for Next.js applications. This enhances our ESLint setup with
+  Next.js-specific best practices and optimizations.
+
+  - Add eslint-config-next dependency
+  - Import and apply Next.js config rules
+  - Update peer dependencies to use caret ranges
+
 ## 0.1.5
 
 ### Patch Changes
