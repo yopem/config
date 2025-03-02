@@ -1,5 +1,16 @@
 # @yopem/eslint-config
 
+## 0.1.5
+
+### Patch Changes
+
+- [`784f3d4`](https://github.com/yopem/tooling/commit/784f3d40bbdb2ed16d3af1428007d0f35547e293)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint): add
+  peer dependencies
+
+  Add eslint-plugin-turbo as a dev dependency and include essential ESLint peer
+  dependencies to ensure proper functioning and compatibility with other tools.
+
 ## 0.1.4
 
 ### Patch Changes
