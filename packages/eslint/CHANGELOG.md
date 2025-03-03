@@ -1,5 +1,20 @@
 # @yopem/eslint-config
 
+## 0.1.7
+
+### Patch Changes
+
+- [`4701431`](https://github.com/yopem/tooling/commit/4701431d627bef2053c320a92f62676b29fd7b4d)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - revert(eslint):
+  remove eslint-config-next
+
+  Replace eslint-config-next with direct configuration using
+  @next/eslint-plugin-next. This removes unnecessary dependencies while
+  maintaining the same linting rules for Next.js projects.
+
+  The change also updates peer dependency version ranges to be more flexible
+  using the ^ prefix.
+
 ## 0.1.6
 
 ### Patch Changes
