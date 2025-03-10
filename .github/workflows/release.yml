@@ -11,6 +11,9 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+  LEFTHOOK: 0
+
 jobs:
   release:
     name: Release
