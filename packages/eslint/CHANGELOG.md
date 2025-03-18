@@ -1,5 +1,16 @@
 # @yopem/eslint-config
 
+## 0.1.8
+
+### Patch Changes
+
+- [`15ec070`](https://github.com/yopem/tooling/commit/15ec07066d60d113509d23f964a7fc27697f001e)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(eslint):
+  disable no-unsafe-return typescript rule
+
+  Disables the TypeScript ESLint rule that warns about returning any typed
+  values, consistent with other disabled unsafe rules in the configuration.
+
 ## 0.1.7
 
 ### Patch Changes
