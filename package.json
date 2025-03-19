@@ -33,7 +33,7 @@
     "@changesets/types": "6.1.0",
     "@yopem/eslint-config": "*",
     "@yopem/prettier-config": "*",
-    "eslint": "9.21.0",
+    "eslint": "9.22.0",
     "lefthook": "1.11.3",
     "prettier": "3.5.3",
     "turbo": "2.4.4",
