@@ -20,4 +20,4 @@ jobs:
           git config --global user.email 'github@yopem.com'
       - uses: pnpm/action-setup@v4.1.0
       - name: Run changesets-renovate
-        run: pnpm dlx @scaleway/changesets-renovate
+        run: bunx @scaleway/changesets-renovate
