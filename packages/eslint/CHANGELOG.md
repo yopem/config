@@ -1,5 +1,14 @@
 # @yopem/eslint-config
 
+## 0.1.11
+
+### Patch Changes
+
+- [#63](https://github.com/yopem/tooling/pull/63)
+  [`39bf0c4`](https://github.com/yopem/tooling/commit/39bf0c47fff6373c3e86ed435109a51dd41cf49d)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@next/eslint-plugin-next` to `15.2.4`.
+
 ## 0.1.10
 
 ### Patch Changes
