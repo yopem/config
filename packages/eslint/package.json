@@ -1,6 +1,6 @@
 {
   "name": "@yopem/eslint-config",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "description": "",
   "keywords": [
     "eslint",
@@ -59,17 +59,18 @@
   },
   "dependencies": {
     "@eslint/compat": "1.2.7",
-    "@eslint/js": "9.21.0",
-    "@next/eslint-plugin-next": "15.2.1",
+    "@eslint/js": "9.23.0",
+    "@next/eslint-plugin-next": "15.2.4",
     "@types/eslint": "9.6.1",
-    "eslint": "9.21.0",
+    "eslint": "9.23.0",
     "eslint-config-prettier": "10.1.1",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-prettier": "5.2.3",
+    "eslint-plugin-prettier": "5.2.5",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.2.0",
-    "typescript-eslint": "8.26.0"
+    "eslint-plugin-turbo": "2.4.4",
+    "typescript-eslint": "8.28.0"
   },
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
