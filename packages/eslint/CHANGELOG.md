@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.1.12
+
+### Patch Changes
+
+- [`27d7499`](https://github.com/yopem/tooling/commit/27d7499cbdadbeb0d9e3644fa37585893e6bc3aa)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(eslint):
+  move turbo plugin to root config
+
 ## 0.1.11
 
 ### Patch Changes
