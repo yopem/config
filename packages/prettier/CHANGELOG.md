@@ -1,5 +1,14 @@
 # @yopem/prettier-config
 
+## 0.1.4
+
+### Patch Changes
+
+- [#78](https://github.com/yopem/tooling/pull/78)
+  [`6c1f7b3`](https://github.com/yopem/tooling/commit/6c1f7b3a47540214dfcfbb991e6af2f36c399ea2)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript` to `5.8.3`.
+
 ## 0.1.3
 
 ### Patch Changes
