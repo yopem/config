@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
-    "eslint-plugin-turbo": "2.4.4",
+    "eslint-plugin-turbo": "2.5.0",
     "typescript": "5.8.2"
   },
   "peerDependencies": {
