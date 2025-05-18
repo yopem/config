@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.1.15
+
+### Patch Changes
+
+- [`513708b`](https://github.com/yopem/tooling/commit/513708be068be8baf0874759f382448a72868aec)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix(eslint): add
+  fallback when gitignore file doesn't exist
+
 ## 0.1.14
 
 ### Patch Changes
