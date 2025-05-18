@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, ".gitignore")
 
 export default tseslint.config(
-  fs.existsSync(gitignorePath) && includeIgnoreFile(gitignorePath),
+  fs.existsSync(gitignorePath) ? includeIgnoreFile(gitignorePath) : {},
   { ignores: ["**/*.config.*"] },
 
   eslintConfigPrettier,
