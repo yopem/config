@@ -1,5 +1,14 @@
 # @yopem/prettier-config
 
+## 0.1.5
+
+### Patch Changes
+
+- [#95](https://github.com/yopem/tooling/pull/95)
+  [`d8c9f9f`](https://github.com/yopem/tooling/commit/d8c9f9ff2b70ae99297367a6ce50116702d91bf2)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@ianvs/prettier-plugin-sort-imports` to `4.4.2`.
+
 ## 0.1.4
 
 ### Patch Changes
