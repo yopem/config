@@ -1,5 +1,19 @@
 # @yopem/eslint-config
 
+## 0.1.18
+
+### Patch Changes
+
+- [#101](https://github.com/yopem/tooling/pull/101)
+  [`ad39d0f`](https://github.com/yopem/tooling/commit/ad39d0fef352a0eaa4bcd49e4d16fd0f82f2157c)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `turbo` to `2.5.4`. Updated dependency `eslint-plugin-turbo` to `2.5.4`.
+
+- [#102](https://github.com/yopem/tooling/pull/102)
+  [`fd98239`](https://github.com/yopem/tooling/commit/fd98239f8d3422516f584c7be455603a7f718daa)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@eslint/js` to `9.28.0`. Updated dependency `eslint` to `9.28.0`.
+
 ## 0.1.17
 
 ### Patch Changes
