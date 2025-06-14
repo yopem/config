@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- [`a34a5e7`](https://github.com/yopem/tooling/commit/a34a5e7c5abe2a7f363e2b0814d0fdf0a2c2ab75)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint): add
+  no-console warning rule
+
 ## 0.1.19
 
 ### Patch Changes
