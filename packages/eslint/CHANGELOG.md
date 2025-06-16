@@ -1,5 +1,19 @@
 # @yopem/eslint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- [#108](https://github.com/yopem/tooling/pull/108)
+  [`d18156a`](https://github.com/yopem/tooling/commit/d18156a3e1944da81ded08d742158d8469bde6a0)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript-eslint` to `8.34.0`.
+
+- [#107](https://github.com/yopem/tooling/pull/107)
+  [`1be1b22`](https://github.com/yopem/tooling/commit/1be1b2226c9b249e95796abcae71586874ce0801)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@eslint/compat` to `1.3.0`.
+
 ## 0.2.0
 
 ### Minor Changes
