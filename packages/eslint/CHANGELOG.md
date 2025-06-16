@@ -1,5 +1,14 @@
 # @yopem/eslint-config
 
+## 0.2.2
+
+### Patch Changes
+
+- [#109](https://github.com/yopem/tooling/pull/109)
+  [`b8be556`](https://github.com/yopem/tooling/commit/b8be556e59e3301942723c06186e47c72f323ede)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint` to `9.29.0`. Updated dependency `@eslint/js` to `9.29.0`.
+
 ## 0.2.1
 
 ### Patch Changes
