@@ -1,5 +1,13 @@
 # @yopem/typescript-config
 
+## 0.2.1
+
+### Patch Changes
+
+- [`68eaf64`](https://github.com/yopem/tooling/commit/68eaf64075a6c7e4dfcc8071c8f6499cec95490e)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - build(typescript):
+  remove conflicting compiler options
+
 ## 0.2.0
 
 ### Minor Changes
