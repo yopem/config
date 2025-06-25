@@ -1,5 +1,36 @@
 # @yopem/eslint-config
 
+## 0.2.2
+
+### Patch Changes
+
+- [#109](https://github.com/yopem/tooling/pull/109)
+  [`b8be556`](https://github.com/yopem/tooling/commit/b8be556e59e3301942723c06186e47c72f323ede)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint` to `9.29.0`. Updated dependency `@eslint/js` to `9.29.0`.
+
+## 0.2.1
+
+### Patch Changes
+
+- [#108](https://github.com/yopem/tooling/pull/108)
+  [`d18156a`](https://github.com/yopem/tooling/commit/d18156a3e1944da81ded08d742158d8469bde6a0)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript-eslint` to `8.34.0`.
+
+- [#107](https://github.com/yopem/tooling/pull/107)
+  [`1be1b22`](https://github.com/yopem/tooling/commit/1be1b2226c9b249e95796abcae71586874ce0801)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@eslint/compat` to `1.3.0`.
+
+## 0.2.0
+
+### Minor Changes
+
+- [`a34a5e7`](https://github.com/yopem/tooling/commit/a34a5e7c5abe2a7f363e2b0814d0fdf0a2c2ab75)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint): add
+  no-console warning rule
+
 ## 0.1.19
 
 ### Patch Changes
