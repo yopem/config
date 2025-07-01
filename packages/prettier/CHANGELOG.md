@@ -1,5 +1,16 @@
 # @yopem/prettier-config
 
+## 0.1.7
+
+### Patch Changes
+
+- [`1206ad9`](https://github.com/yopem/tooling/commit/1206ad9e2dbdcd92f5e0528698d22671a3d3413d)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(prettier): add
+  support for JSONC files
+
+  Added configuration for JSONC files in Prettier. This includes specifying
+  `trailingComma` as "none" for JSONC files in both `base.js` and `react.js`.
+
 ## 0.1.6
 
 ### Patch Changes
