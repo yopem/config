@@ -38,6 +38,12 @@ const config = {
         parser: "babel",
       },
     },
+    {
+      files: ["*.jsonc"],
+      options: {
+        trailingComma: "none",
+      },
+    },
   ],
 }
 
