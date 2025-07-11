@@ -1,5 +1,29 @@
 # @yopem/eslint-config
 
+## 0.2.3
+
+### Patch Changes
+
+- [#119](https://github.com/yopem/tooling/pull/119)
+  [`0e0db6b`](https://github.com/yopem/tooling/commit/0e0db6b16b8a63c072dea90389b1657e2ad70889)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@next/eslint-plugin-next` to `15.3.5`.
+
+- [#127](https://github.com/yopem/tooling/pull/127)
+  [`0be8d15`](https://github.com/yopem/tooling/commit/0be8d15a7e22c6581ba88575b923f518ddd2e87d)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint` to `9.30.1`. Updated dependency `@eslint/js` to `9.30.1`.
+
+- [#126](https://github.com/yopem/tooling/pull/126)
+  [`67832db`](https://github.com/yopem/tooling/commit/67832db53675aa1f59b9958cdd1284b7d72099fe)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript-eslint` to `8.36.0`.
+
+- [#123](https://github.com/yopem/tooling/pull/123)
+  [`9280a98`](https://github.com/yopem/tooling/commit/9280a98a5f5a80246a49cd459d27b7960b379fe3)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-prettier` to `5.5.1`.
+
 ## 0.2.2
 
 ### Patch Changes
@@ -275,7 +299,6 @@
   Adds the official eslint-config-next package which provides specialized
   linting rules for Next.js applications. This enhances our ESLint setup with
   Next.js-specific best practices and optimizations.
-
   - Add eslint-config-next dependency
   - Import and apply Next.js config rules
   - Update peer dependencies to use caret ranges
@@ -316,7 +339,6 @@
   dependencies to use workspace versions
 
   Updated various package dependencies to use workspace versions:
-
   - Changed @yopem/typescript-config to workspace:\* in bun.lock,
     packages/eslint/package.json, and packages/prettier/package.json.
   - Updated @ianvs/prettier-plugin-sort-imports, prettier, and
