@@ -1,5 +1,5 @@
 {
-  "name": "tooling",
+  "name": "config",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -7,7 +7,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yopem/tooling.git"
+    "url": "git+https://github.com/yopem/config.git"
   },
   "author": "Karyana Yandi <karyana@yandi.me>",
   "license": "MIT",

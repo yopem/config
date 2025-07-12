@@ -1,6 +1,6 @@
-# Tooling
+# Config
 
-Yopem tooling for TypeScript projects.
+Yopem configurations for TypeScript projects.
 
 Includes configurations for:
 

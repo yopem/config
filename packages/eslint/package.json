@@ -5,7 +5,7 @@
   "keywords": [
     "eslint",
     "eslint-config",
-    "tooling"
+    "config"
   ],
   "type": "module",
   "main": "src/base.js",
@@ -46,11 +46,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yopem/tooling",
-    "directory": "packages/tooling/eslint"
+    "url": "https://github.com/yopem/config",
+    "directory": "packages/config/eslint"
   },
   "bugs": {
-    "url": "https://github.com/yopem/tooling/issues"
+    "url": "https://github.com/yopem/config/issues"
   },
   "scripts": {
     "lint": "eslint ./src",

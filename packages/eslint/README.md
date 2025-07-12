@@ -19,4 +19,4 @@ deno install npm:@yopem/eslint-config
 ## Licence
 
 This project is licensed under the terms of the
-[MIT license](https://github.com/yopem/tooling/blob/main/LICENSE.md).
+[MIT license](https://github.com/yopem/config/blob/main/LICENSE.md).

@@ -5,7 +5,7 @@
   "keywords": [
     "typescript",
     "typescript-config",
-    "tooling"
+    "config"
   ],
   "type": "module",
   "main": "src/base.json",
@@ -40,10 +40,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yopem/tooling.git",
-    "directory": "packages/tooling/typescript"
+    "url": "git+https://github.com/yopem/config.git",
+    "directory": "packages/config/typescript"
   },
   "bugs": {
-    "url": "https://github.com/yopem/tooling/issues"
+    "url": "https://github.com/yopem/config/issues"
   }
 }

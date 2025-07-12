@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- [`68eaf64`](https://github.com/yopem/tooling/commit/68eaf64075a6c7e4dfcc8071c8f6499cec95490e)
+- [`68eaf64`](https://github.com/yopem/config/commit/68eaf64075a6c7e4dfcc8071c8f6499cec95490e)
   Thanks [@karyanayandi](https://github.com/karyanayandi)! - build(typescript):
   remove conflicting compiler options
 
@@ -12,7 +12,7 @@
 
 ### Minor Changes
 
-- [`d598d66`](https://github.com/yopem/tooling/commit/d598d669f2f04ad0a33a2663f02993b49eb23bb2)
+- [`d598d66`](https://github.com/yopem/config/commit/d598d669f2f04ad0a33a2663f02993b49eb23bb2)
   Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(ts): remove
   customConditions from base config
 
@@ -20,7 +20,7 @@
 
 ### Patch Changes
 
-- [`34a8def`](https://github.com/yopem/tooling/commit/34a8defbafa05bd3a1afaf73166e88a82c6f48d7)
+- [`34a8def`](https://github.com/yopem/config/commit/34a8defbafa05bd3a1afaf73166e88a82c6f48d7)
   Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(ts): remove
   customConditions from base config
 
