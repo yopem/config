@@ -13,9 +13,13 @@ import tseslint from "typescript-eslint"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, ".gitignore")
+const prettierignorePath = path.resolve(__dirname, ".prettierignore")
 
 export default tseslint.config(
   fs.existsSync(gitignorePath) ? includeIgnoreFile(gitignorePath) : {},
+  fs.existsSync(prettierignorePath)
+    ? includeIgnoreFile(prettierignorePath)
+    : {},
   { ignores: ["**/*.config.*"] },
 
   eslintConfigPrettier,
