@@ -1,5 +1,17 @@
 # @yopem/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- [`cc05888`](https://github.com/yopem/config/commit/cc058885d5060ce887d0c06ae192d03edc65bfb2)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint): add
+  support for .prettierignore in config
+
+  Extend ESLint base config to also respect .prettierignore files, in addition
+  to .gitignore. This ensures files ignored by Prettier are also excluded from
+  linting.
+
 ## 0.2.4
 
 ### Patch Changes
