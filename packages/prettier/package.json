@@ -51,7 +51,7 @@
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.5.1",
     "prettier": "3.6.2",
-    "prettier-plugin-tailwindcss": "0.6.14"
+    "prettier-plugin-tailwindcss": "0.7.1"
   },
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
@@ -60,6 +60,6 @@
   "peerDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "prettier": "^3.5.2",
-    "prettier-plugin-tailwindcss": "^0.6.11"
+    "prettier-plugin-tailwindcss": "^0.6.11 || ^0.7.0"
   }
 }
