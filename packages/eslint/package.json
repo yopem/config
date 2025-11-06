@@ -74,7 +74,7 @@
   "devDependencies": {
     "@yopem/typescript-config": "workspace:*",
     "eslint-plugin-turbo": "2.5.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@eslint/compat": "^1.2.7",
