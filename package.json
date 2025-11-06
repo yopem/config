@@ -34,7 +34,7 @@
     "@yopem/eslint-config": "*",
     "@yopem/prettier-config": "*",
     "eslint": "9.32.0",
-    "lefthook": "1.12.2",
+    "lefthook": "1.13.6",
     "prettier": "3.6.2",
     "turbo": "2.5.5",
     "typescript": "5.9.3"
