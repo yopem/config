@@ -1,0 +1,1 @@
+# @yopem/oxlint-config

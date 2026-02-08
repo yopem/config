@@ -1,11 +1,11 @@
 {
-  "name": "@yopem/oxfmt-config",
+  "name": "@yopem/oxlint-config",
   "version": "0.0.1",
   "description": "",
   "keywords": [
     "config",
-    "oxfmt",
-    "oxfmt-config"
+    "oxlint",
+    "oxlint-config"
   ],
   "bugs": {
     "url": "https://github.com/yopem/config/issues"
@@ -15,26 +15,30 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yopem/config.git",
-    "directory": "packages/config/oxfmt"
+    "directory": "packages/config/oxlint"
   },
   "files": [
-    "src/.oxfmtrc.json"
+    "src/.oxlintrc.json"
   ],
   "type": "module",
   "sideEffects": false,
-  "main": "src/.oxfmtrc.json",
-  "module": "src/.oxfmtrc.json",
-  "types": "src/.oxfmtrc.json",
+  "main": "src/.oxlintrc.json",
+  "module": "src/.oxlintrc.json",
+  "types": "src/.oxlintrc.json",
   "exports": {
-    "default": "src/.oxfmtrc.json"
+    "default": "src/.oxlintrc.json"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "oxfmt": "^0.28.0"
+    "eslint-plugin-better-tailwindcss": "^4.1.1",
+    "eslint-plugin-oxfmt": "^0.0.12",
+    "oxlint": "^1.43.0"
   },
   "peerDependencies": {
-    "oxfmt": "^0.28.0"
+    "eslint-plugin-better-tailwindcss": "^4.1.1",
+    "eslint-plugin-oxfmt": "^0.0.12",
+    "oxlint": "^1.43.0"
   }
 }
