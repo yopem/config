@@ -3,17 +3,28 @@
   "version": "0.1.10",
   "description": "",
   "keywords": [
+    "config",
     "prettier",
-    "prettier-config",
-    "config"
+    "prettier-config"
   ],
-  "type": "module",
-  "main": "src/base.js",
-  "module": "src/base.js",
-  "types": "src/base.js",
+  "bugs": {
+    "url": "https://github.com/yopem/config/issues"
+  },
+  "license": "MIT",
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/config.git",
+    "directory": "packages/config/prettier"
+  },
   "files": [
     "src"
   ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "src/base.js",
+  "module": "src/base.js",
+  "types": "src/base.js",
   "exports": {
     "./base": {
       "source": "./src/base.js",
@@ -31,19 +42,8 @@
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false,
   "publishConfig": {
     "access": "public"
-  },
-  "author": "Karyana Yandi <karyana@yandi.me>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yopem/config.git",
-    "directory": "packages/config/prettier"
-  },
-  "bugs": {
-    "url": "https://github.com/yopem/config/issues"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"

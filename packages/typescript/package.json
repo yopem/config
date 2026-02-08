@@ -3,17 +3,28 @@
   "version": "0.2.1",
   "description": "",
   "keywords": [
+    "config",
     "typescript",
-    "typescript-config",
-    "config"
+    "typescript-config"
   ],
-  "type": "module",
-  "main": "src/base.json",
-  "module": "src/base.json",
-  "types": "src/base.json",
+  "bugs": {
+    "url": "https://github.com/yopem/config/issues"
+  },
+  "license": "MIT",
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/config.git",
+    "directory": "packages/config/typescript"
+  },
   "files": [
     "src"
   ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "src/base.json",
+  "module": "src/base.json",
+  "types": "src/base.json",
   "exports": {
     "./base": {
       "types": "./src/base.json",
@@ -32,18 +43,7 @@
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false,
   "publishConfig": {
     "access": "public"
-  },
-  "author": "Karyana Yandi <karyana@yandi.me>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yopem/config.git",
-    "directory": "packages/config/typescript"
-  },
-  "bugs": {
-    "url": "https://github.com/yopem/config/issues"
   }
 }

@@ -3,17 +3,28 @@
   "version": "0.3.2",
   "description": "",
   "keywords": [
+    "config",
     "eslint",
-    "eslint-config",
-    "config"
+    "eslint-config"
   ],
-  "type": "module",
-  "main": "src/base.js",
-  "module": "src/base.js",
-  "types": "src/types.d.ts",
+  "bugs": {
+    "url": "https://github.com/yopem/config/issues"
+  },
+  "license": "MIT",
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yopem/config",
+    "directory": "packages/config/eslint"
+  },
   "files": [
     "src"
   ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "src/base.js",
+  "module": "src/base.js",
+  "types": "src/types.d.ts",
   "exports": {
     "./base": {
       "source": "./src/base.js",
@@ -38,19 +49,8 @@
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false,
   "publishConfig": {
     "access": "public"
-  },
-  "author": "Karyana Yandi <karyana@yandi.me>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yopem/config",
-    "directory": "packages/config/eslint"
-  },
-  "bugs": {
-    "url": "https://github.com/yopem/config/issues"
   },
   "scripts": {
     "lint": "eslint ./src",
@@ -89,5 +89,6 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0 || ^7.0.0",
     "typescript-eslint": "^8.25.0"
-  }
+  },
+  "prettier": "@yopem/prettier-config/base"
 }
