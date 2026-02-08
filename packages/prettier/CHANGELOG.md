@@ -1,5 +1,24 @@
 # @yopem/prettier-config
 
+## 0.1.10
+
+### Patch Changes
+
+- [#146](https://github.com/yopem/config/pull/146)
+  [`474427b`](https://github.com/yopem/config/commit/474427b079f20b51f0147127640b94fc34b1bb3e)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@ianvs/prettier-plugin-sort-imports` to `4.7.0`.
+
+- [#143](https://github.com/yopem/config/pull/143)
+  [`8e4cd2c`](https://github.com/yopem/config/commit/8e4cd2c71ef2a54636e1ffc42c3e91413660900f)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript` to `5.9.3`.
+
+- [#149](https://github.com/yopem/config/pull/149)
+  [`239e2c7`](https://github.com/yopem/config/commit/239e2c7122735344bbb6503c197f7cdd8575b850)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `prettier-plugin-tailwindcss` to `^0.6.11 || ^0.7.0`.
+
 ## 0.1.9
 
 ### Patch Changes

@@ -1,5 +1,59 @@
 # @yopem/eslint-config
 
+## 0.3.2
+
+### Patch Changes
+
+- [#150](https://github.com/yopem/config/pull/150)
+  [`6b0e3fa`](https://github.com/yopem/config/commit/6b0e3fa2c3a1f8d141061335e468d87c6cc265e6)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript-eslint` to `8.46.2`.
+
+- [#152](https://github.com/yopem/config/pull/152)
+  [`27e06a8`](https://github.com/yopem/config/commit/27e06a82109116ec9761452ee4b2238642de07f1)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@next/eslint-plugin-next` to `^15.2.0 || ^16.0.0`.
+
+- [#156](https://github.com/yopem/config/pull/156)
+  [`81dd427`](https://github.com/yopem/config/commit/81dd427dee23c2bf64e61c3af4908a7e1adcfa2d)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@eslint/compat` to `1.4.1`.
+
+- [#157](https://github.com/yopem/config/pull/157)
+  [`492be47`](https://github.com/yopem/config/commit/492be472a613397242dd79af7d15ffa83de0e97c)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript-eslint` to `8.46.3`.
+
+- [#143](https://github.com/yopem/config/pull/143)
+  [`8e4cd2c`](https://github.com/yopem/config/commit/8e4cd2c71ef2a54636e1ffc42c3e91413660900f)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `typescript` to `5.9.3`.
+
+- [#145](https://github.com/yopem/config/pull/145)
+  [`f3294b3`](https://github.com/yopem/config/commit/f3294b3ab10487bc89ca8c55b2068983770012b6)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@eslint/compat` to `1.4.0`.
+
+- [#142](https://github.com/yopem/config/pull/142)
+  [`bb1a658`](https://github.com/yopem/config/commit/bb1a6583e2b25d2b5b1ed02b07df2362e4a8aa61)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-prettier` to `5.5.4`.
+
+- [#153](https://github.com/yopem/config/pull/153)
+  [`d54ae1a`](https://github.com/yopem/config/commit/d54ae1ab46c5a46a721d80e1513073057a63d5d2)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-react-hooks` to `^5.1.0 || ^7.0.0`.
+
+- [#144](https://github.com/yopem/config/pull/144)
+  [`c8c40ed`](https://github.com/yopem/config/commit/c8c40eddfbd21e085d3c4a8f8773c88f5131f530)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `turbo` to `2.6.0`. Updated dependency `eslint-plugin-turbo` to `2.6.0`.
+
+- [#147](https://github.com/yopem/config/pull/147)
+  [`5344a70`](https://github.com/yopem/config/commit/5344a7019c48c2fa21ff87a0baa0fc4415059a61)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@next/eslint-plugin-next` to `15.5.6`.
+
 ## 0.3.1
 
 ### Patch Changes
