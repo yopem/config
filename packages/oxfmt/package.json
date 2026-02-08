@@ -1,0 +1,47 @@
+{
+  "name": "@yopem/oxfmt-config",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "oxfmt",
+    "oxfmt-config",
+    "config"
+  ],
+  "type": "module",
+  "main": "src/.oxfmtrc.json",
+  "module": "src/.oxfmtrc.json",
+  "types": "src/.oxfmtrc.json",
+  "files": [
+    "src/.oxfmtrc.json"
+  ],
+  "exports": {
+    "default": "src/.oxfmtrc.json"
+  },  
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/config.git",
+    "directory": "packages/config/oxfmt"
+  },
+  "bugs": {
+    "url": "https://github.com/yopem/config/issues"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@yopem/typescript-config": "workspace:*",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "oxfmt": "^0.28.0"
+  },
+  "dependencies": {
+    "oxfmt": "^0.28.0"
+  }
+}
