@@ -1,5 +1,13 @@
 # @yopem/prettier-config
 
+## 0.1.11
+
+### Patch Changes
+
+- [#164](https://github.com/yopem/config/pull/164) [`d18b2a0`](https://github.com/yopem/config/commit/d18b2a012cf1353d4945275ccd6441caa4bf3090) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier-plugin-tailwindcss` to `0.7.2`.
+
+- [#162](https://github.com/yopem/config/pull/162) [`7eaca4c`](https://github.com/yopem/config/commit/7eaca4c77032ba8e40e98545154a6553accf63b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@ianvs/prettier-plugin-sort-imports` to `4.7.1`.
+
 ## 0.1.10
 
 ### Patch Changes
@@ -108,6 +116,7 @@
   dependencies to use workspace versions
 
   Updated various package dependencies to use workspace versions:
+
   - Changed @yopem/typescript-config to workspace:\* in bun.lock,
     packages/eslint/package.json, and packages/prettier/package.json.
   - Updated @ianvs/prettier-plugin-sort-imports, prettier, and
