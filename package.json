@@ -34,7 +34,7 @@
     "@yopem/oxfmt-config": "*",
     "@yopem/oxlint-config": "*",
     "lefthook": "2.1.2",
-    "turbo": "2.6.0",
+    "turbo": "2.8.13",
     "typescript": "5.9.3"
   },
   "engines": {
