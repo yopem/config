@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "eslint-plugin-better-tailwindcss": "^4.1.1",
-    "eslint-plugin-oxfmt": "^0.0.12",
+    "eslint-plugin-oxfmt": "^0.1.0",
     "oxlint": "^1.43.0"
   }
 }

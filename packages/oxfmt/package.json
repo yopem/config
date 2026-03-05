@@ -35,6 +35,6 @@
     "oxfmt": "^0.36.0"
   },
   "peerDependencies": {
-    "oxfmt": "^0.28.0"
+    "oxfmt": "^0.36.0"
   }
 }
