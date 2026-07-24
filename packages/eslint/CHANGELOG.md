@@ -1,6 +1,6 @@
 # @yopem/eslint-config
 
-## 0.3.3
+## 0.3.6
 
 ### Patch Changes
 
