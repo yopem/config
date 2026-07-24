@@ -33,7 +33,7 @@
     "@changesets/types": "6.1.0",
     "@yopem/oxfmt-config": "*",
     "@yopem/oxlint-config": "*",
-    "lefthook": "2.1.2",
+    "lefthook": "2.1.10",
     "oxfmt": "^0.36.0",
     "turbo": "2.8.13",
     "typescript": "5.9.3"
