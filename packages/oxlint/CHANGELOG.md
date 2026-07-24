@@ -1,5 +1,13 @@
 # @yopem/oxlint-config
 
+## 0.0.4
+
+### Patch Changes
+
+- [#187](https://github.com/yopem/config/pull/187) [`a3cd058`](https://github.com/yopem/config/commit/a3cd058dec0f042d9cfb2f7cb10b12a4114a6f5d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.15.0`.
+
+- [#190](https://github.com/yopem/config/pull/190) [`6d63a3a`](https://github.com/yopem/config/commit/6d63a3a791e2dc32ba49ea1f6ad254ce8194b8b8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxlint-tsgolint` to `^0.25.0`.
+
 ## 0.0.3
 
 ### Patch Changes

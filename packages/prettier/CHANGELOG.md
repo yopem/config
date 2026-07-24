@@ -1,5 +1,11 @@
 # @yopem/prettier-config
 
+## 0.1.12
+
+### Patch Changes
+
+- [#191](https://github.com/yopem/config/pull/191) [`790a902`](https://github.com/yopem/config/commit/790a90204cc70238f4182dc3ac1c253b15d0c935) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier-plugin-tailwindcss` to `^0.6.11 || ^0.7.0 || ^0.8.0`.
+
 ## 0.1.11
 
 ### Patch Changes
