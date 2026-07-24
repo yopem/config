@@ -9,44 +9,29 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "experimentalTailwindcss": {
-    "functions": ["cn", "cva"]
+    "functions": ["cn", "cva", "clsx"]
   },
-  "experimentalSortImports": {
+  "sortImports": {
+    "newlinesBetween": true,
     "groups": [
-      ["side-effect"],
-      ["builtin"],
-      ["external", "type-external"],
-      ["internal", "type-internal"],
-      ["parent", "type-parent"],
-      ["sibling", "type-sibling"],
-      ["index", "type-index"]
+      "type-import",
+      ["value-builtin", "value-external"],
+      "type-workspace",
+      "value-workspace",
+      "type-internal",
+      "value-internal",
+      ["type-parent", "type-sibling", "type-index"],
+      ["value-parent", "value-sibling", "value-index"],
+      "unknown"
     ]
   },
   "experimentalSortPackageJson": true,
   "ignorePatterns": [
-    "node_modules",
-    ".pnp",
-    ".pnp.js",
-    ".env",
-    ".env.local",
-    ".env.development.local",
-    ".env.test.local",
-    ".env.production.local",
-    "coverage",
-    ".turbo",
-    ".vercel",
-    ".next/",
-    "out/",
-    "build",
-    "dist",
-    "npm-debug.log*",
-    "yarn-debug.log*",
-    "yarn-error.log*",
-    ".DS_Store",
-    "*.pem",
-    "migrations/",
-    "tsconfig.tsbuildinfo",
-    "*.tsbuildinfo",
-    "next-env.d.ts"
+    "**/pnpm-lock.yaml",
+    "**/bun.lock",
+    "package-lock.json",
+    "yarn.lock",
+    "**/migrations/",
+    "**/AGENTS.md"
   ]
 }
