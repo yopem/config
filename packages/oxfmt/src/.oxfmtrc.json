@@ -16,8 +16,6 @@
     "groups": [
       "type-import",
       ["value-builtin", "value-external"],
-      "type-workspace",
-      "value-workspace",
       "type-internal",
       "value-internal",
       ["type-parent", "type-sibling", "type-index"],
