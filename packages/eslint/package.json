@@ -75,7 +75,7 @@
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@yopem/prettier-config": "workspace:*",
     "@yopem/typescript-config": "workspace:*",
-    "eslint-plugin-turbo": "2.8.13",
+    "eslint-plugin-turbo": "2.10.6",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
