@@ -1,5 +1,14 @@
 # @yopem/oxlint-config
 
+## 0.0.5
+
+### Patch Changes
+
+- [`5bcc805`](https://github.com/yopem/config/commit/5bcc805e7c24c369357a7c3e7eff3c632353cd06) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: enforce correctness category and clean up rules
+
+  Set "correctness" category to "error" in .oxlintrc.json. Removed unused
+  and redundant rules for better clarity and maintainability.
+
 ## 0.0.4
 
 ### Patch Changes
