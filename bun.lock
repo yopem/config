@@ -19,7 +19,7 @@
     },
     "packages/eslint": {
       "name": "@yopem/eslint-config",
-      "version": "0.3.4",
+      "version": "0.3.6",
       "dependencies": {
         "@eslint/compat": "2.1.0",
         "@eslint/js": "10.0.1",
@@ -58,17 +58,17 @@
     },
     "packages/oxfmt": {
       "name": "@yopem/oxfmt-config",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "dependencies": {
         "oxfmt": "^0.60.0",
       },
       "peerDependencies": {
-        "oxfmt": "^0.36.0",
+        "oxfmt": "^0.36.0 || ^0.60.0",
       },
     },
     "packages/oxlint": {
       "name": "@yopem/oxlint-config",
-      "version": "0.0.3",
+      "version": "0.0.5",
       "dependencies": {
         "eslint-plugin-better-tailwindcss": "^4.1.1",
         "eslint-plugin-oxfmt": "^0.15.0",
@@ -83,7 +83,7 @@
     },
     "packages/prettier": {
       "name": "@yopem/prettier-config",
-      "version": "0.1.11",
+      "version": "0.1.12",
       "dependencies": {
         "@ianvs/prettier-plugin-sort-imports": "4.7.1",
         "prettier": "3.6.2",
@@ -101,7 +101,7 @@
     },
     "packages/typescript": {
       "name": "@yopem/typescript-config",
-      "version": "0.2.1",
+      "version": "0.2.2",
     },
   },
   "packages": {
