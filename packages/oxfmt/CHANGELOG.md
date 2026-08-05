@@ -1,5 +1,11 @@
 # @yopem/oxfmt-config
 
+## 0.0.4
+
+### Patch Changes
+
+- [#203](https://github.com/yopem/config/pull/203) [`dea4b71`](https://github.com/yopem/config/commit/dea4b719a07fd4ad1c389d581851c9cdd95bcd17) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0 || ^0.60.0`.
+
 ## 0.0.3
 
 ### Patch Changes
