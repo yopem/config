@@ -76,7 +76,7 @@
     "@yopem/prettier-config": "workspace:*",
     "@yopem/typescript-config": "workspace:*",
     "eslint-plugin-turbo": "2.10.6",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   },
   "peerDependencies": {
     "@eslint/compat": "^1.2.7 || ^2.0.0",
