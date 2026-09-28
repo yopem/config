@@ -13,7 +13,13 @@
     "typescript",
     "unicorn"
   ],
-  "jsPlugins": ["eslint-plugin-oxfmt", "eslint-plugin-better-tailwindcss"],
+  "jsPlugins": [
+    "eslint-plugin-oxfmt",
+    "eslint-plugin-better-tailwindcss",
+    { "name": "quality", "specifier": "./quality.ts" },
+    { "name": "stylistic", "specifier": "./stylistic.ts" },
+    { "name": "effect", "specifier": "./effect/index.ts" }
+  ],
   "categories": {
     "correctness": "error"
   },
@@ -21,6 +27,30 @@
     "builtin": true
   },
   "rules": {
+    "oxc/no-accumulating-spread": "error",
+    "quality/no-array-filter-map": "error",
+    "quality/no-reduce-accumulator-copy": "error",
+    "quality/no-chained-type-assertions": "error",
+    "quality/no-conditional-empty-object-spread": "error",
+    "quality/no-known-value-widening": "error",
+    "quality/no-module-mocking": "error",
+    "quality/no-object-parameters": "error",
+    "quality/no-reflect-apply": "error",
+    "quality/no-reflect-get": "error",
+    "quality/no-runtime-typeof": "error",
+    "quality/no-shape-in-symbol-names": "error",
+    "quality/no-unknown-parameters": "error",
+    "quality/no-unknown-returns": "error",
+    "quality/no-unknown-type-aliases": "error",
+    "quality/no-unsafe-dictionary-type": "error",
+    "quality/no-widen-then-assert": "error",
+    "quality/require-safety-comment-for-type-assertion": "error",
+    "stylistic/require-readable-spacing": "error",
+    "effect/no-manual-effect-error-tag": "error",
+    "effect/no-manual-tag-comparison": "error",
+    "effect/no-manual-tagged-construction": "error",
+    "effect/no-service-constructor-imports": "error",
+    "effect/prefer-effect-match": "error",
     "better-tailwindcss/enforce-canonical-classes": "error",
     "better-tailwindcss/enforce-consistent-class-order": "off",
     "better-tailwindcss/enforce-consistent-line-wrapping": "off",

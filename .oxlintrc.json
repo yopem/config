@@ -3,5 +3,6 @@
   "env": {
     "node": true
   },
-  "extends": ["@yopem/oxlint-config"]
+  "extends": ["./packages/oxlint/src/.oxlintrc.json"],
+  "ignorePatterns": ["packages/oxlint/src/**"]
 }
