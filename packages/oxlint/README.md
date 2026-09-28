@@ -1,10 +1,9 @@
 # @yopem/oxlint-config
 
-Shared Oxlint rules, including `quality/*`, `stylistic/*`, and `effect/*`. All rules are enabled at error severity alongside the existing ESLint, TypeScript, Tailwind, and formatter rules.
+Shared Oxlint rules, including `quality/*`, `stylistic/*`, and `effect/*`, alongside ESLint, TypeScript, and formatter rules. Tailwind CSS rules are opt-in.
 
 ## Installation
 
-````sh
 ```sh
 npm install @yopem/eslint-config
 # or
@@ -15,7 +14,7 @@ yarn add @yopem/eslint-config
 bun add @yopem/eslint-config
 # or
 deno install npm:@yopem/eslint-config
-````
+```
 
 ## Extend
 
@@ -40,7 +39,22 @@ Oxlint requires a file path in JSON `extends`; `"@yopem/oxlint-config"` alone is
 }
 ```
 
-Run `bunx oxlint .` (or `npx oxlint .`). `effect/*` rules are included by default; turn individual rules off if your project does not use Effect. `quality/no-reduce-accumulator-copy` is paired with Oxlint's `oxc/no-accumulating-spread`.
+Run `bunx --bun oxlint .` so Bun loads the bundled TypeScript rule sources; Node.js cannot load `.ts` files from `node_modules` directly. `effect/*` rules are included by default; turn individual rules off if your project does not use Effect. `quality/no-reduce-accumulator-copy` is paired with Oxlint's `oxc/no-accumulating-spread`.
+
+### Tailwind CSS (optional)
+
+In a Tailwind project, extend the Tailwind preset **instead of** the base preset:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./node_modules/@yopem/oxlint-config/src/tailwindcss.json"]
+}
+```
+
+This includes every base rule plus `better-tailwindcss/*`. The plugin is an optional dependency of this package, installed automatically by default; if your package manager did not install it, add `eslint-plugin-better-tailwindcss` to your Tailwind project. Your Tailwind project also needs `tailwindcss` installed. The preset expects `./src/styles/globals.css`; override `settings.better-tailwindcss.entryPoint` in your own config if the CSS entry point differs.
+
+Non-Tailwind projects should keep the base preset: it never loads the Tailwind plugin, even if the optional dependency was installed.
 
 ## Credits
 
