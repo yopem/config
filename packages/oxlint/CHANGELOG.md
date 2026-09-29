@@ -1,5 +1,15 @@
 # @yopem/oxlint-config
 
+## 0.1.4
+
+### Patch Changes
+
+- [`0ae7965`](https://github.com/yopem/config/commit/0ae7965cd15244f924b7e57b2bce48eb1de8f7db) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add React, Next.js, and Tailwind presets
+
+  Introduce optional presets for React, Next.js, and Tailwind CSS.
+  Update README with usage instructions. Adjust build script and
+  package exports. Simplify Effect and Tailwind preset definitions.
+
 ## 0.1.3
 
 ### Patch Changes
