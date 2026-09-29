@@ -18,18 +18,35 @@
     "directory": "packages/config/oxlint"
   },
   "files": [
-    "src"
+    "dist",
+    "LICENSE.md"
   ],
   "type": "module",
   "sideEffects": false,
-  "main": "src/.oxlintrc.json",
-  "module": "src/.oxlintrc.json",
-  "types": "src/.oxlintrc.json",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "default": "src/.oxlintrc.json"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./effect": {
+      "types": "./dist/presets/effect.d.ts",
+      "default": "./dist/presets/effect.js"
+    },
+    "./tailwindcss": {
+      "types": "./dist/presets/tailwindcss.d.ts",
+      "default": "./dist/presets/tailwindcss.js"
+    },
+    "./plugins/*": "./dist/*.js"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
+    "prepack": "bun run build"
   },
   "dependencies": {
     "@oxlint/plugins": "1.76.0",

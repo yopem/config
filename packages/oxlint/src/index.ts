@@ -1,6 +1,7 @@
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
+import { defineConfig } from "oxlint";
+
+export default defineConfig({
+  plugins: [
     "eslint",
     "import",
     "jsx-a11y",
@@ -11,21 +12,26 @@
     "react",
     "react-perf",
     "typescript",
-    "unicorn"
+    "unicorn",
   ],
-  "jsPlugins": [
-    "eslint-plugin-oxfmt",
-    { "name": "quality", "specifier": "./quality.ts" },
-    { "name": "stylistic", "specifier": "./stylistic.ts" },
-    { "name": "effect", "specifier": "./effect/index.ts" }
+  jsPlugins: [
+    import.meta.resolve("eslint-plugin-oxfmt"),
+    {
+      name: "quality",
+      specifier: import.meta.resolve("@yopem/oxlint-config/plugins/quality"),
+    },
+    {
+      name: "stylistic",
+      specifier: import.meta.resolve("@yopem/oxlint-config/plugins/stylistic"),
+    },
   ],
-  "categories": {
-    "correctness": "error"
+  categories: {
+    correctness: "error",
   },
-  "env": {
-    "builtin": true
+  env: {
+    builtin: true,
   },
-  "rules": {
+  rules: {
     "oxc/no-accumulating-spread": "error",
     "quality/no-array-filter-map": "error",
     "quality/no-reduce-accumulator-copy": "error",
@@ -45,18 +51,18 @@
     "quality/no-widen-then-assert": "error",
     "quality/require-safety-comment-for-type-assertion": "error",
     "stylistic/require-readable-spacing": "error",
-    "effect/no-manual-effect-error-tag": "error",
-    "effect/no-manual-tag-comparison": "error",
-    "effect/no-manual-tagged-construction": "error",
-    "effect/no-service-constructor-imports": "error",
-    "effect/prefer-effect-match": "error",
     "import/no-relative-parent-imports": "error",
     "no-array-constructor": "error",
     "no-async-promise-executor": "error",
     "no-case-declarations": "error",
     "no-compare-neg-zero": "error",
     "no-cond-assign": "error",
-    "no-console": ["error", { "allow": ["error", "warn", "info"] }],
+    "no-console": [
+      "error",
+      {
+        allow: ["error", "warn", "info"],
+      },
+    ],
     "no-constant-binary-expression": "error",
     "no-constant-condition": "error",
     "no-control-regex": "error",
@@ -88,7 +94,13 @@
     "no-unused-expressions": "error",
     "no-unused-labels": "error",
     "no-unused-private-class-members": "error",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
+    ],
     "no-useless-backreference": "error",
     "no-useless-catch": "error",
     "no-useless-escape": "error",
@@ -109,7 +121,10 @@
     "typescript/consistent-type-definitions": "error",
     "typescript/consistent-type-imports": [
       "warn",
-      { "prefer": "type-imports", "fixStyle": "separate-type-imports" }
+      {
+        prefer: "type-imports",
+        fixStyle: "separate-type-imports",
+      },
     ],
     "typescript/no-array-delete": "error",
     "typescript/no-base-to-string": "error",
@@ -123,7 +138,14 @@
     "typescript/no-implied-eval": "error",
     "typescript/no-inferrable-types": "error",
     "typescript/no-misused-new": "error",
-    "typescript/no-misused-promises": ["error", { "checksVoidReturn": { "attributes": false } }],
+    "typescript/no-misused-promises": [
+      "error",
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
     "typescript/no-namespace": "error",
     "typescript/no-non-null-asserted-optional-chain": "error",
     "typescript/no-redundant-type-constituents": "error",
@@ -147,9 +169,9 @@
     "typescript/prefer-promise-reject-errors": "error",
     "typescript/require-await": "error",
     "typescript/restrict-plus-operands": "error",
-    "typescript/triple-slash-reference": "error"
+    "typescript/triple-slash-reference": "error",
   },
-  "ignorePatterns": [
+  ignorePatterns: [
     "**/node_modules",
     "**/.pnp",
     "**/.pnp.js",
@@ -180,6 +202,6 @@
     "**/skills",
     "**/.gemini",
     "**/migrations/",
-    "**/*.config.*"
-  ]
-}
+    "**/*.config.*",
+  ],
+});
