@@ -1,5 +1,11 @@
 # @yopem/oxlint-config
 
+## 0.1.1
+
+### Patch Changes
+
+- [`b2a8225`](https://github.com/yopem/config/commit/b2a822563245a663060857f5f41f5dcbbdbadef9) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): make Tailwind CSS rules optional
+
 ## 0.1.0
 
 ### Minor Changes
