@@ -1,5 +1,11 @@
 # @yopem/prettier-config
 
+## 0.1.13
+
+### Patch Changes
+
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+
 ## 0.1.12
 
 ### Patch Changes
