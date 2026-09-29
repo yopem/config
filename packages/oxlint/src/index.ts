@@ -1,19 +1,7 @@
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
-  plugins: [
-    "eslint",
-    "import",
-    "jsx-a11y",
-    "nextjs",
-    "nextjs",
-    "oxc",
-    "promise",
-    "react",
-    "react-perf",
-    "typescript",
-    "unicorn",
-  ],
+  plugins: ["eslint", "import", "oxc", "promise", "typescript", "unicorn"],
   jsPlugins: [
     import.meta.resolve("eslint-plugin-oxfmt"),
     {

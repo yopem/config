@@ -1,6 +1,4 @@
 import { defineConfig } from "oxlint";
-import baseConfig from "../index.js";
-
 export default defineConfig({
   jsPlugins: [
     {
@@ -15,5 +13,4 @@ export default defineConfig({
     "effect/no-service-constructor-imports": "error",
     "effect/prefer-effect-match": "error",
   },
-  extends: [baseConfig],
 });

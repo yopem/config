@@ -1,6 +1,6 @@
 # @yopem/oxlint-config
 
-Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. Effect and Tailwind CSS rules are opt-in.
+Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React, Next.js, Effect, and Tailwind CSS plugins are opt-in.
 
 ## Installation
 
@@ -31,29 +31,58 @@ export default {
 
 Run `oxlint .` to lint. `quality/no-reduce-accumulator-copy` is paired with Oxlint's `oxc/no-accumulating-spread`.
 
-### Effect (optional)
+### React (optional)
 
-In an Effect project, use the Effect preset instead of the base preset:
+Add the React preset alongside base:
 
 ```ts
-import effectConfig from "@yopem/oxlint-config/effect";
+import baseConfig from "@yopem/oxlint-config";
+import reactConfig from "@yopem/oxlint-config/react";
 
-export default { extends: [effectConfig] };
+export default { extends: [baseConfig, reactConfig] };
 ```
 
-This includes every base rule plus `effect/*`. Non-Effect projects keep the base preset.
+This enables `jsx-a11y`, `react`, and `react-perf`.
+
+### Next.js (optional)
+
+Add the Next.js preset alongside base and React:
+
+```ts
+import baseConfig from "@yopem/oxlint-config";
+import reactConfig from "@yopem/oxlint-config/react";
+import nextjsConfig from "@yopem/oxlint-config/nextjs";
+
+export default { extends: [baseConfig, reactConfig, nextjsConfig] };
+```
+
+This enables `nextjs` without implicitly enabling other plugins.
+
+### Effect (optional)
+
+Add the Effect preset alongside base (and any other presets):
+
+```ts
+import baseConfig from "@yopem/oxlint-config";
+import effectConfig from "@yopem/oxlint-config/effect";
+
+export default { extends: [baseConfig, effectConfig] };
+```
+
+This enables `effect/*`.
 
 ### Tailwind CSS (optional)
 
-In a Tailwind project, use the Tailwind preset instead of the base preset:
+Add the Tailwind preset alongside base (and any other presets):
 
 ```ts
+import baseConfig from "@yopem/oxlint-config";
 import tailwindConfig from "@yopem/oxlint-config/tailwindcss";
 
-export default { extends: [tailwindConfig] };
+export default { extends: [baseConfig, tailwindConfig] };
 ```
 
-This includes every base rule plus `better-tailwindcss/*`. The plugin is an optional dependency of this package, installed automatically by default; if your package manager did not install it, add `eslint-plugin-better-tailwindcss` to your Tailwind project. Your Tailwind project also needs `tailwindcss` installed. The preset expects `./src/styles/globals.css`; override `settings.better-tailwindcss.entryPoint` in your own config if the CSS entry point differs.
+This enables `better-tailwindcss/*`. The plugin is an optional dependency of this package, installed automatically by default; if your package manager did not install it, add `eslint-plugin-better-tailwindcss` to your Tailwind project. Your Tailwind project also needs `tailwindcss` installed. The preset expects `./src/styles/globals.css`; override `settings.better-tailwindcss.entryPoint` in your own config if the CSS entry point differs.
 
 Non-Tailwind projects should keep the base preset: it never loads the Tailwind plugin, even if the optional dependency was installed.
 

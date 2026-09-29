@@ -1,6 +1,4 @@
 import { defineConfig } from "oxlint";
-import baseConfig from "../index.js";
-
 export default defineConfig({
   jsPlugins: [
     {
@@ -25,5 +23,4 @@ export default defineConfig({
       entryPoint: "./src/styles/globals.css",
     },
   },
-  extends: [baseConfig],
 });

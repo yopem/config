@@ -35,6 +35,14 @@
       "types": "./dist/presets/effect.d.ts",
       "default": "./dist/presets/effect.js"
     },
+    "./react": {
+      "types": "./dist/presets/react.d.ts",
+      "default": "./dist/presets/react.js"
+    },
+    "./nextjs": {
+      "types": "./dist/presets/nextjs.d.ts",
+      "default": "./dist/presets/nextjs.js"
+    },
     "./tailwindcss": {
       "types": "./dist/presets/tailwindcss.d.ts",
       "default": "./dist/presets/tailwindcss.js"
@@ -45,7 +53,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
+    "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --root=./src --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
     "prepack": "bun run build"
   },
   "dependencies": {
