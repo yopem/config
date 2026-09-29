@@ -1,5 +1,11 @@
 # @yopem/oxfmt-config
 
+## 0.0.8
+
+### Patch Changes
+
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+
 ## 0.0.7
 
 ### Patch Changes
