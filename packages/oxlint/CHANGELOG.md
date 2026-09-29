@@ -1,5 +1,11 @@
 # @yopem/oxlint-config
 
+## 0.1.0
+
+### Minor Changes
+
+- [`2572deb`](https://github.com/yopem/config/commit/2572debdc23e21b156a4cbcce608b92e2c3df344) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add quality, stylistic, and effect rules
+
 ## 0.0.9
 
 ### Patch Changes
