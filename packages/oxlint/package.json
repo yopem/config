@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yopem/config.git",
-    "directory": "packages/config/oxlint"
+    "directory": "packages/oxlint"
   },
   "files": [
     "dist",

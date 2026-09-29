@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/yopem/config",
-    "directory": "packages/config/eslint"
+    "directory": "packages/eslint"
   },
   "files": [
     "src"
