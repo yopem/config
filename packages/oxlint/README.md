@@ -1,6 +1,6 @@
 # @yopem/oxlint-config
 
-Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React, Next.js, Effect, and Tailwind CSS plugins are opt-in.
+Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React, Next.js, and Effect plugins are opt-in.
 
 ## Installation
 
@@ -70,21 +70,6 @@ export default { extends: [baseConfig, effectConfig] };
 ```
 
 This enables `effect/*`.
-
-### Tailwind CSS (optional)
-
-Add the Tailwind preset alongside base (and any other presets):
-
-```ts
-import baseConfig from "@yopem/oxlint-config";
-import tailwindConfig from "@yopem/oxlint-config/tailwindcss";
-
-export default { extends: [baseConfig, tailwindConfig] };
-```
-
-This enables `better-tailwindcss/*`. The plugin is an optional dependency of this package, installed automatically by default; if your package manager did not install it, add `eslint-plugin-better-tailwindcss` to your Tailwind project. Your Tailwind project also needs `tailwindcss` installed. The preset expects `./src/styles/globals.css`; override `settings.better-tailwindcss.entryPoint` in your own config if the CSS entry point differs.
-
-Non-Tailwind projects should keep the base preset: it never loads the Tailwind plugin, even if the optional dependency was installed.
 
 ## Credits
 
