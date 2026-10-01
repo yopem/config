@@ -1,5 +1,11 @@
 # @yopem/oxlint-config
 
+## 0.1.5
+
+### Patch Changes
+
+- [`4564b83`](https://github.com/yopem/config/commit/4564b83357061a138f581dc54cdce447a61f2c4d) Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore: remove Tailwind CSS support from oxlint-config
+
 ## 0.1.4
 
 ### Patch Changes
