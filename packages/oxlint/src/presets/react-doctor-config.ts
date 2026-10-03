@@ -10,10 +10,10 @@ export default defineConfig({
   ],
   rules: {
     ...RECOMMENDED_RULES,
-    "react-doctor/jsx-props-no-spreading": "warn",
     "react-doctor/react-in-jsx-scope": "off",
     "react-doctor/jsx-no-jsx-as-prop": "off",
     "react-doctor/jsx-max-depth": "off",
     "react-doctor/only-export-components": "off",
+    "react-doctor/context-provider-value-from-unmemoized-local-literal": "off",
   },
 })
