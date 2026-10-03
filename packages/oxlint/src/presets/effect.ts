@@ -1,9 +1,10 @@
-import { defineConfig } from "oxlint";
+import { defineConfig } from "oxlint"
 export default defineConfig({
   jsPlugins: [
     {
       name: "effect",
-      specifier: import.meta.resolve("@yopem/oxlint-config/plugins/effect/index"),
+      specifier: import.meta
+        .resolve("@yopem/oxlint-config/plugins/effect/index"),
     },
   ],
   rules: {
@@ -13,4 +14,4 @@ export default defineConfig({
     "effect/no-service-constructor-imports": "error",
     "effect/prefer-effect-match": "error",
   },
-});
+})

@@ -1,4 +1,4 @@
-import { defineConfig } from "oxlint";
+import { defineConfig } from "oxlint"
 
 export default defineConfig({
   plugins: ["eslint", "import", "oxc", "promise", "typescript", "unicorn"],
@@ -192,4 +192,4 @@ export default defineConfig({
     "**/migrations/",
     "**/*.config.*",
   ],
-});
+})

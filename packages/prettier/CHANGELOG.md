@@ -4,21 +4,31 @@
 
 ### Patch Changes
 
-- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
 
 ## 0.1.12
 
 ### Patch Changes
 
-- [#191](https://github.com/yopem/config/pull/191) [`790a902`](https://github.com/yopem/config/commit/790a90204cc70238f4182dc3ac1c253b15d0c935) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier-plugin-tailwindcss` to `^0.6.11 || ^0.7.0 || ^0.8.0`.
+- [#191](https://github.com/yopem/config/pull/191)
+  [`790a902`](https://github.com/yopem/config/commit/790a90204cc70238f4182dc3ac1c253b15d0c935)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `prettier-plugin-tailwindcss` to `^0.6.11 || ^0.7.0 || ^0.8.0`.
 
 ## 0.1.11
 
 ### Patch Changes
 
-- [#164](https://github.com/yopem/config/pull/164) [`d18b2a0`](https://github.com/yopem/config/commit/d18b2a012cf1353d4945275ccd6441caa4bf3090) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier-plugin-tailwindcss` to `0.7.2`.
+- [#164](https://github.com/yopem/config/pull/164)
+  [`d18b2a0`](https://github.com/yopem/config/commit/d18b2a012cf1353d4945275ccd6441caa4bf3090)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `prettier-plugin-tailwindcss` to `0.7.2`.
 
-- [#162](https://github.com/yopem/config/pull/162) [`7eaca4c`](https://github.com/yopem/config/commit/7eaca4c77032ba8e40e98545154a6553accf63b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@ianvs/prettier-plugin-sort-imports` to `4.7.1`.
+- [#162](https://github.com/yopem/config/pull/162)
+  [`7eaca4c`](https://github.com/yopem/config/commit/7eaca4c77032ba8e40e98545154a6553accf63b3)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `@ianvs/prettier-plugin-sort-imports` to `4.7.1`.
 
 ## 0.1.10
 

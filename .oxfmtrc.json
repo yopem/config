@@ -1,8 +1,0 @@
-{
-  "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "env": {
-    "node": true
-  },
-  "extends": ["@yopem/oxfmt-config"],
-  "ignorePatterns": ["packages/eslint/**", "packages/prettier/**"]
-}

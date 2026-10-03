@@ -1,5 +1,5 @@
-import { defineConfig } from "oxlint";
-import { RECOMMENDED_RULES } from "oxlint-plugin-react-doctor";
+import { defineConfig } from "oxlint"
+import { RECOMMENDED_RULES } from "oxlint-plugin-react-doctor"
 
 export default defineConfig({
   jsPlugins: [
@@ -15,4 +15,4 @@ export default defineConfig({
     "react-doctor/jsx-max-depth": "off",
     "react-doctor/only-export-components": "off",
   },
-});
+})

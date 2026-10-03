@@ -4,16 +4,19 @@
 
 ### Patch Changes
 
-- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
 
 ## 0.2.2
 
 ### Patch Changes
 
-- [`133c84d`](https://github.com/yopem/config/commit/133c84dc4b4a6a8fc4fc80e33c25ce53424412ab) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix(typescript): disable noPropertyAccessFromIndexSignature
+- [`133c84d`](https://github.com/yopem/config/commit/133c84dc4b4a6a8fc4fc80e33c25ce53424412ab)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix(typescript):
+  disable noPropertyAccessFromIndexSignature
 
-  Set `noPropertyAccessFromIndexSignature` to false in base.json to
-  allow property access from index signatures.
+  Set `noPropertyAccessFromIndexSignature` to false in base.json to allow
+  property access from index signatures.
 
 ## 0.2.1
 

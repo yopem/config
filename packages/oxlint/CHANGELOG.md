@@ -4,112 +4,158 @@
 
 ### Patch Changes
 
-- [`5d9ddd7`](https://github.com/yopem/config/commit/5d9ddd7d4a7bad3907a50377702fb7d6a17c863e) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add React Doctor preset and plugin support
+- [`5d9ddd7`](https://github.com/yopem/config/commit/5d9ddd7d4a7bad3907a50377702fb7d6a17c863e)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add
+  React Doctor preset and plugin support
 
   Introduced the React Doctor preset to @yopem/oxlint-config, enabling
-  react-doctor/\* lint rules. Updated dependencies and added tests to
-  ensure opt-in functionality alongside existing presets.
+  react-doctor/\* lint rules. Updated dependencies and added tests to ensure
+  opt-in functionality alongside existing presets.
 
 ## 0.1.5
 
 ### Patch Changes
 
-- [`4564b83`](https://github.com/yopem/config/commit/4564b83357061a138f581dc54cdce447a61f2c4d) Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore: remove Tailwind CSS support from oxlint-config
+- [`4564b83`](https://github.com/yopem/config/commit/4564b83357061a138f581dc54cdce447a61f2c4d)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore: remove
+  Tailwind CSS support from oxlint-config
 
 ## 0.1.4
 
 ### Patch Changes
 
-- [`0ae7965`](https://github.com/yopem/config/commit/0ae7965cd15244f924b7e57b2bce48eb1de8f7db) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add React, Next.js, and Tailwind presets
+- [`0ae7965`](https://github.com/yopem/config/commit/0ae7965cd15244f924b7e57b2bce48eb1de8f7db)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add
+  React, Next.js, and Tailwind presets
 
-  Introduce optional presets for React, Next.js, and Tailwind CSS.
-  Update README with usage instructions. Adjust build script and
-  package exports. Simplify Effect and Tailwind preset definitions.
+  Introduce optional presets for React, Next.js, and Tailwind CSS. Update README
+  with usage instructions. Adjust build script and package exports. Simplify
+  Effect and Tailwind preset definitions.
 
 ## 0.1.3
 
 ### Patch Changes
 
-- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
 
 ## 0.1.2
 
 ### Patch Changes
 
-- [`3e0cca2`](https://github.com/yopem/config/commit/3e0cca2cd251e66edc54c901cf8156d9e33441d5) Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(oxlint): migrate to TypeScript-based config
+- [`3e0cca2`](https://github.com/yopem/config/commit/3e0cca2cd251e66edc54c901cf8156d9e33441d5)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(oxlint):
+  migrate to TypeScript-based config
 
-  Replaced JSON-based Oxlint configuration with TypeScript-based
-  config for better extensibility. Updated package structure,
-  added presets for Effect and Tailwind CSS, and adjusted build
-  scripts. Consolidated licenses and updated README accordingly.
+  Replaced JSON-based Oxlint configuration with TypeScript-based config for
+  better extensibility. Updated package structure, added presets for Effect and
+  Tailwind CSS, and adjusted build scripts. Consolidated licenses and updated
+  README accordingly.
 
 ## 0.1.1
 
 ### Patch Changes
 
-- [`b2a8225`](https://github.com/yopem/config/commit/b2a822563245a663060857f5f41f5dcbbdbadef9) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): make Tailwind CSS rules optional
+- [`b2a8225`](https://github.com/yopem/config/commit/b2a822563245a663060857f5f41f5dcbbdbadef9)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): make
+  Tailwind CSS rules optional
 
 ## 0.1.0
 
 ### Minor Changes
 
-- [`2572deb`](https://github.com/yopem/config/commit/2572debdc23e21b156a4cbcce608b92e2c3df344) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add quality, stylistic, and effect rules
+- [`2572deb`](https://github.com/yopem/config/commit/2572debdc23e21b156a4cbcce608b92e2c3df344)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add
+  quality, stylistic, and effect rules
 
 ## 0.0.9
 
 ### Patch Changes
 
-- [#213](https://github.com/yopem/config/pull/213) [`4607a8f`](https://github.com/yopem/config/commit/4607a8f0a968c0bbbbc895c8ec6f9beacbeede32) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0`.
+- [#213](https://github.com/yopem/config/pull/213)
+  [`4607a8f`](https://github.com/yopem/config/commit/4607a8f0a968c0bbbbc895c8ec6f9beacbeede32)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0`.
 
 ## 0.0.8
 
 ### Patch Changes
 
-- [#209](https://github.com/yopem/config/pull/209) [`69a70d3`](https://github.com/yopem/config/commit/69a70d34e60d255b8993506eb08699d0e30a5978) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0`.
+- [#209](https://github.com/yopem/config/pull/209)
+  [`69a70d3`](https://github.com/yopem/config/commit/69a70d34e60d255b8993506eb08699d0e30a5978)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0`.
 
 ## 0.0.7
 
 ### Patch Changes
 
-- [#206](https://github.com/yopem/config/pull/206) [`ff29a3f`](https://github.com/yopem/config/commit/ff29a3f40d74265252b716a1f9e4262cd5fd56ce) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0`.
+- [#206](https://github.com/yopem/config/pull/206)
+  [`ff29a3f`](https://github.com/yopem/config/commit/ff29a3f40d74265252b716a1f9e4262cd5fd56ce)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0 || ^0.17.0`.
 
 ## 0.0.6
 
 ### Patch Changes
 
-- [#202](https://github.com/yopem/config/pull/202) [`4227741`](https://github.com/yopem/config/commit/4227741c629e309073ba5018ed86a580f2163d57) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0`.
+- [#202](https://github.com/yopem/config/pull/202)
+  [`4227741`](https://github.com/yopem/config/commit/4227741c629e309073ba5018ed86a580f2163d57)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.1.0 || ^0.15.0`.
 
-- [#195](https://github.com/yopem/config/pull/195) [`ab589fe`](https://github.com/yopem/config/commit/ab589fe482322349a46e12f3081b24e83d58b519) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxlint-tsgolint` to `^7.0.0`.
+- [#195](https://github.com/yopem/config/pull/195)
+  [`ab589fe`](https://github.com/yopem/config/commit/ab589fe482322349a46e12f3081b24e83d58b519)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxlint-tsgolint` to `^7.0.0`.
 
 ## 0.0.5
 
 ### Patch Changes
 
-- [`5bcc805`](https://github.com/yopem/config/commit/5bcc805e7c24c369357a7c3e7eff3c632353cd06) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: enforce correctness category and clean up rules
+- [`5bcc805`](https://github.com/yopem/config/commit/5bcc805e7c24c369357a7c3e7eff3c632353cd06)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: enforce
+  correctness category and clean up rules
 
-  Set "correctness" category to "error" in .oxlintrc.json. Removed unused
-  and redundant rules for better clarity and maintainability.
+  Set "correctness" category to "error" in .oxlintrc.json. Removed unused and
+  redundant rules for better clarity and maintainability.
 
 ## 0.0.4
 
 ### Patch Changes
 
-- [#187](https://github.com/yopem/config/pull/187) [`a3cd058`](https://github.com/yopem/config/commit/a3cd058dec0f042d9cfb2f7cb10b12a4114a6f5d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.15.0`.
+- [#187](https://github.com/yopem/config/pull/187)
+  [`a3cd058`](https://github.com/yopem/config/commit/a3cd058dec0f042d9cfb2f7cb10b12a4114a6f5d)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.15.0`.
 
-- [#190](https://github.com/yopem/config/pull/190) [`6d63a3a`](https://github.com/yopem/config/commit/6d63a3a791e2dc32ba49ea1f6ad254ce8194b8b8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxlint-tsgolint` to `^0.25.0`.
+- [#190](https://github.com/yopem/config/pull/190)
+  [`6d63a3a`](https://github.com/yopem/config/commit/6d63a3a791e2dc32ba49ea1f6ad254ce8194b8b8)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxlint-tsgolint` to `^0.25.0`.
 
 ## 0.0.3
 
 ### Patch Changes
 
-- [`e9779e0`](https://github.com/yopem/config/commit/e9779e03045593e7138b4ee0207a90b7abc7f8a1) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: peer dependencies
+- [`e9779e0`](https://github.com/yopem/config/commit/e9779e03045593e7138b4ee0207a90b7abc7f8a1)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: peer
+  dependencies
 
-- [#171](https://github.com/yopem/config/pull/171) [`a4bdddb`](https://github.com/yopem/config/commit/a4bdddb9dfb89a73b63a9ed082b462e31511e845) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxlint-tsgolint` to `^0.16.0`.
+- [#171](https://github.com/yopem/config/pull/171)
+  [`a4bdddb`](https://github.com/yopem/config/commit/a4bdddb9dfb89a73b63a9ed082b462e31511e845)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxlint-tsgolint` to `^0.16.0`.
 
-- [#168](https://github.com/yopem/config/pull/168) [`de2e7ce`](https://github.com/yopem/config/commit/de2e7ce4f35b52790c688824c567572f4c08bcf4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-oxfmt` to `^0.1.0`.
+- [#168](https://github.com/yopem/config/pull/168)
+  [`de2e7ce`](https://github.com/yopem/config/commit/de2e7ce4f35b52790c688824c567572f4c08bcf4)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `eslint-plugin-oxfmt` to `^0.1.0`.
 
 ## 0.0.2
 
 ### Patch Changes
 
-- [`af9deb7`](https://github.com/yopem/config/commit/af9deb7397d5fa0d1a9d30ef925e36ca58cff0a8) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add oxlint-tsgolint dependency
+- [`af9deb7`](https://github.com/yopem/config/commit/af9deb7397d5fa0d1a9d30ef925e36ca58cff0a8)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add
+  oxlint-tsgolint dependency

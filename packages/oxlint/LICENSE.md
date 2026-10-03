@@ -1,9 +1,8 @@
 MIT License
 
-Copyright (c) 2025 Karyana Yandi
-Copyright (c) 2026 Dillon Mulroy
-Copyright OpenJS Foundation and other contributors, <www.openjsf.org>
-Copyright (c) 2023-PRESENT ESLint Stylistic contributors
+Copyright (c) 2025 Karyana Yandi Copyright (c) 2026 Dillon Mulroy Copyright
+OpenJS Foundation and other contributors, <www.openjsf.org> Copyright (c)
+2023-PRESENT ESLint Stylistic contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

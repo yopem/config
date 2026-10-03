@@ -4,46 +4,71 @@
 
 ### Patch Changes
 
-- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
+- [`a91c08b`](https://github.com/yopem/config/commit/a91c08ba5d73942987f0dce4ac6fa53fbb1e0546)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: repo paths
 
 ## 0.0.7
 
 ### Patch Changes
 
-- [#214](https://github.com/yopem/config/pull/214) [`d8d6aaf`](https://github.com/yopem/config/commit/d8d6aaf9745feb6b028fd274e3b39cc59c486fb0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0 || ^0.63.0 || ^0.67.0`.
+- [#214](https://github.com/yopem/config/pull/214)
+  [`d8d6aaf`](https://github.com/yopem/config/commit/d8d6aaf9745feb6b028fd274e3b39cc59c486fb0)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0 || ^0.63.0 || ^0.67.0`.
 
 ## 0.0.6
 
 ### Patch Changes
 
-- [#210](https://github.com/yopem/config/pull/210) [`9dcf656`](https://github.com/yopem/config/commit/9dcf6569448cd00017738132f904d7040db7ba6e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0 || ^0.63.0`.
+- [#210](https://github.com/yopem/config/pull/210)
+  [`9dcf656`](https://github.com/yopem/config/commit/9dcf6569448cd00017738132f904d7040db7ba6e)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0 || ^0.63.0`.
 
 ## 0.0.5
 
 ### Patch Changes
 
-- [#207](https://github.com/yopem/config/pull/207) [`e3ad7cb`](https://github.com/yopem/config/commit/e3ad7cb5e17ba0a494c77c66acf54e13a7014ae2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0`.
+- [#207](https://github.com/yopem/config/pull/207)
+  [`e3ad7cb`](https://github.com/yopem/config/commit/e3ad7cb5e17ba0a494c77c66acf54e13a7014ae2)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.36.0 || ^0.60.0 || ^0.62.0`.
 
 ## 0.0.4
 
 ### Patch Changes
 
-- [#203](https://github.com/yopem/config/pull/203) [`dea4b71`](https://github.com/yopem/config/commit/dea4b719a07fd4ad1c389d581851c9cdd95bcd17) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0 || ^0.60.0`.
+- [#203](https://github.com/yopem/config/pull/203)
+  [`dea4b71`](https://github.com/yopem/config/commit/dea4b719a07fd4ad1c389d581851c9cdd95bcd17)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.36.0 || ^0.60.0`.
 
 ## 0.0.3
 
 ### Patch Changes
 
-- [#189](https://github.com/yopem/config/pull/189) [`f67735c`](https://github.com/yopem/config/commit/f67735c21da6fdcd98f9b1860e2008395e6b58f9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.60.0`.
+- [#189](https://github.com/yopem/config/pull/189)
+  [`f67735c`](https://github.com/yopem/config/commit/f67735c21da6fdcd98f9b1860e2008395e6b58f9)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.60.0`.
 
-- [`bd7bd09`](https://github.com/yopem/config/commit/bd7bd0920bcc7c3d06ed6cb1e2272fd2a69733a6) Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(config): remove workspace import groups
+- [`bd7bd09`](https://github.com/yopem/config/commit/bd7bd0920bcc7c3d06ed6cb1e2272fd2a69733a6)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - chore(config):
+  remove workspace import groups
 
-- [`9655585`](https://github.com/yopem/config/commit/9655585be6ce913e39e49e86c294af7f21cdebcd) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxfmt): update config for imports and ignore patterns
+- [`9655585`](https://github.com/yopem/config/commit/9655585be6ce913e39e49e86c294af7f21cdebcd)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxfmt): update
+  config for imports and ignore patterns
 
 ## 0.0.2
 
 ### Patch Changes
 
-- [`e9779e0`](https://github.com/yopem/config/commit/e9779e03045593e7138b4ee0207a90b7abc7f8a1) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: peer dependencies
+- [`e9779e0`](https://github.com/yopem/config/commit/e9779e03045593e7138b4ee0207a90b7abc7f8a1)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: peer
+  dependencies
 
-- [#170](https://github.com/yopem/config/pull/170) [`80f6e4b`](https://github.com/yopem/config/commit/80f6e4b92ba6eddc0f6fbd0203948c31429dfbcd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `oxfmt` to `^0.36.0`.
+- [#170](https://github.com/yopem/config/pull/170)
+  [`80f6e4b`](https://github.com/yopem/config/commit/80f6e4b92ba6eddc0f6fbd0203948c31429dfbcd)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency
+  `oxfmt` to `^0.36.0`.
