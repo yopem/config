@@ -1,5 +1,15 @@
 # @yopem/oxlint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- [`2c83390`](https://github.com/yopem/config/commit/2c833905015fca20dec28a4b3d178343076d84e9) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add React Native and TanStack Start presets
+
+  Introduce React Native and TanStack Start presets to Oxlint. Update
+  React, Next.js, and framework-specific presets to use shared React
+  Doctor rules. Remove standalone React Doctor preset.
+
 ## 0.1.6
 
 ### Patch Changes
