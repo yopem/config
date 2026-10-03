@@ -1,5 +1,15 @@
 # @yopem/oxlint-config
 
+## 0.1.6
+
+### Patch Changes
+
+- [`5d9ddd7`](https://github.com/yopem/config/commit/5d9ddd7d4a7bad3907a50377702fb7d6a17c863e) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add React Doctor preset and plugin support
+
+  Introduced the React Doctor preset to @yopem/oxlint-config, enabling
+  react-doctor/\* lint rules. Updated dependencies and added tests to
+  ensure opt-in functionality alongside existing presets.
+
 ## 0.1.5
 
 ### Patch Changes
