@@ -1,5 +1,11 @@
 # @yopem/oxlint-config
 
+## 0.3.1
+
+### Patch Changes
+
+- [`955f41e`](https://github.com/yopem/config/commit/955f41ec3cf35e36e0af7225f8526becb287d04c) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat: disable react-doctor/context-provider-value-from-unmemoized-local-literal
+
 ## 0.3.0
 
 ### Minor Changes
