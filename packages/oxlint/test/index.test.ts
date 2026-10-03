@@ -18,6 +18,12 @@ import {
   TANSTACK_START_RULES,
 } from "oxlint-plugin-react-doctor"
 
+function recommendedRule(key: string) {
+  return key === "react-doctor/jsx-props-no-spreading"
+    ? "warn"
+    : RECOMMENDED_RULES[key]
+}
+
 test("React Doctor rules stay scoped to their framework presets", () => {
   expect(JSON.stringify(baseConfig.jsPlugins)).not.toContain("react-doctor")
 
@@ -31,16 +37,16 @@ test("React Doctor rules stay scoped to their framework presets", () => {
 
     expect(baseConfig.rules?.[key]).toBeUndefined()
     expect(reactConfig.rules?.[key]).toEqual(
-      disabled ? "off" : (TANSTACK_QUERY_RULES[key] ?? RECOMMENDED_RULES[key]),
+      disabled ? "off" : (TANSTACK_QUERY_RULES[key] ?? recommendedRule(key)),
     )
     expect(nextjsConfig.rules?.[key]).toEqual(
-      disabled ? "off" : (NEXTJS_RULES[key] ?? RECOMMENDED_RULES[key]),
+      disabled ? "off" : (NEXTJS_RULES[key] ?? recommendedRule(key)),
     )
     expect(reactNativeConfig.rules?.[key]).toEqual(
-      disabled ? "off" : (REACT_NATIVE_RULES[key] ?? RECOMMENDED_RULES[key]),
+      disabled ? "off" : (REACT_NATIVE_RULES[key] ?? recommendedRule(key)),
     )
     expect(tanstackStartConfig.rules?.[key]).toEqual(
-      disabled ? "off" : (TANSTACK_START_RULES[key] ?? RECOMMENDED_RULES[key]),
+      disabled ? "off" : (TANSTACK_START_RULES[key] ?? recommendedRule(key)),
     )
   }
 

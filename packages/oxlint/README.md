@@ -98,6 +98,17 @@ enabled. `react-doctor/react-in-jsx-scope`, `react-doctor/jsx-no-jsx-as-prop`,
 disabled in every preset. Override individual rules in your project's `rules`
 when needed.
 
+`react-doctor/jsx-props-no-spreading` is enabled at warning severity. Direct
+`props(...)` calls imported from `@stylexjs/stylex`, including namespace,
+default, and named import aliases, are allowed; other prop spreads remain
+checked. Existing `jsxPropsNoSpreading` settings remain supported.
+
+In files importing `@stylexjs/stylex` (including type-only imports),
+`react-doctor/jsx-no-new-array-as-prop` ignores `xstyle` attributes. Inline
+StyleX composition arrays do not require `useMemo` to satisfy this rule. Other
+array-valued props remain checked. These exceptions are supplied by this
+package's framework presets, not the standalone React Doctor CLI.
+
 Project-level security scans and project-analysis checks do not run in the
 standalone plugin; use the React Doctor CLI for those checks.
 
