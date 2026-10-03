@@ -18,10 +18,11 @@ import {
   TANSTACK_START_RULES,
 } from "oxlint-plugin-react-doctor"
 
-test("React preset warns on restricted hook calls with actionable messages", () => {
+test("Restricted hook calls warn with actionable messages", () => {
   const directory = mkdtempSync(join(tmpdir(), "oxlint-react-hooks-"))
   const configPath = join(directory, "oxlint.config.ts")
   const fixturePath = join(directory, "hooks.ts")
+
   const oxlintPath = fileURLToPath(
     new URL("../bin/oxlint", import.meta.resolve("oxlint")),
   )
@@ -30,7 +31,7 @@ test("React preset warns on restricted hook calls with actionable messages", () 
     writeFileSync(
       configPath,
       `import react from ${JSON.stringify(import.meta.resolve("@yopem/oxlint-config/react"))};
-export default { ...react, categories: { correctness: "off" } };`,
+export default { ...react, categories: { correctness: "off" }, rules: { ...react.rules, "react-policy/prefer-named-imports": "off" } };`,
     )
 
     for (const [imports, call, message] of [
@@ -104,6 +105,7 @@ export default { ...react, categories: { correctness: "off" } };`,
         fixturePath,
         `${imports}\nexport function Component() { ${call}; return null; }`,
       )
+
       const result = Bun.spawnSync([
         "node",
         oxlintPath,
@@ -111,6 +113,7 @@ export default { ...react, categories: { correctness: "off" } };`,
         configPath,
         fixturePath,
       ])
+
       const output = result.stdout.toString() + result.stderr.toString()
       expect(result.exitCode).toBe(0)
       expect(output).toContain("react-policy(no-restricted-hooks)")
@@ -122,6 +125,7 @@ export default { ...react, categories: { correctness: "off" } };`,
       fixturePath,
       'import { useCallback, useEffect, useMemo, useState } from "react"; export function Component() { useState(0); return null; }',
     )
+
     const result = Bun.spawnSync([
       "node",
       oxlintPath,
@@ -129,9 +133,83 @@ export default { ...react, categories: { correctness: "off" } };`,
       configPath,
       fixturePath,
     ])
+
     const output = result.stdout.toString() + result.stderr.toString()
     expect(result.exitCode).toBe(0)
     expect(output).not.toContain("react-policy(no-restricted-hooks)")
+  } finally {
+    rmSync(directory, { recursive: true, force: true })
+  }
+}, 30_000)
+
+test("React preset requires named React imports, including types", () => {
+  expect(reactConfig.rules?.["react-policy/prefer-named-imports"]).toBe("error")
+
+  const directory = mkdtempSync(join(tmpdir(), "oxlint-react-imports-"))
+  const configPath = join(directory, "oxlint.config.ts")
+  const fixturePath = join(directory, "imports.ts")
+
+  const oxlintPath = fileURLToPath(
+    new URL("../bin/oxlint", import.meta.resolve("oxlint")),
+  )
+
+  try {
+    writeFileSync(
+      configPath,
+      `import react from ${JSON.stringify(import.meta.resolve("@yopem/oxlint-config/react"))};
+export default { ...react, categories: { correctness: "off" } };`,
+    )
+
+    for (const [code, violations] of [
+      ['import React from "react";', 1],
+      ['import R from "react"; R.useState(0);', 1],
+      ['import type React from "react";', 1],
+      ['import * as React from "react";', 1],
+      ['import * as R from "react"; R.useRef(null);', 1],
+      ['import type * as React from "react";', 1],
+      ['import React, { useState } from "react";', 1],
+      ['import React, * as R from "react";', 2],
+      ['import { default as React } from "react";', 1],
+      ['import { type default as React } from "react";', 1],
+      ['import { "default" as React } from "react";', 1],
+      [
+        'import { useState, useRef } from "react"; export function Component() { useState(0); useRef(null); return null; }',
+        0,
+      ],
+      [
+        'import { useState as state } from "react"; export function Component() { state(0); return null; }',
+        0,
+      ],
+      ['import type { ReactNode, Ref } from "react";', 0],
+      ['import { useState, type ReactNode } from "react";', 0],
+      ['import "react";', 0],
+      ['import React from "other-library";', 0],
+      ['import type * as React from "other-library";', 0],
+      ['import * as JSX from "react/jsx-runtime";', 0],
+    ] as const) {
+      writeFileSync(fixturePath, code)
+
+      const result = Bun.spawnSync([
+        "node",
+        oxlintPath,
+        "-c",
+        configPath,
+        fixturePath,
+      ])
+
+      const output = result.stdout.toString() + result.stderr.toString()
+      expect(output).not.toContain("Failed to load")
+      expect(
+        output.match(/react-policy\(prefer-named-imports\)/g) ?? [],
+      ).toHaveLength(violations)
+      expect(result.exitCode, `${code}\n${output}`).toBe(violations > 0 ? 1 : 0)
+
+      if (violations > 0) {
+        expect(output.replace(/\s+/g, " ")).toContain(
+          "Use named imports from React instead of default or namespace imports.",
+        )
+      }
+    }
   } finally {
     rmSync(directory, { recursive: true, force: true })
   }
@@ -172,6 +250,7 @@ test("React Doctor rules stay scoped to their framework presets", () => {
   const directory = mkdtempSync(join(tmpdir(), "oxlint-react-doctor-"))
   const configPath = join(directory, "oxlint.config.ts")
   const fixturePath = join(directory, "component.jsx")
+
   const oxlintPath = fileURLToPath(
     new URL("../bin/oxlint", import.meta.resolve("oxlint")),
   )
@@ -193,6 +272,7 @@ ${presets.map((preset, index) => `import preset${index} from ${JSON.stringify(im
 export default { extends: [base, ${presets.map((_, index) => `preset${index}`).join(", ")}] };`,
       )
       writeFileSync(fixturePath, "export const answer = 42;\n")
+
       const clean = Bun.spawnSync([
         "node",
         oxlintPath,
@@ -200,6 +280,7 @@ export default { extends: [base, ${presets.map((_, index) => `preset${index}`).j
         configPath,
         fixturePath,
       ])
+
       expect(clean.exitCode).toBe(0)
       expect(clean.stderr.toString()).toBe("")
 
@@ -213,6 +294,7 @@ export function Component() {
 }
 `,
       )
+
       const invalid = Bun.spawnSync([
         "node",
         oxlintPath,
@@ -220,6 +302,7 @@ export function Component() {
         configPath,
         fixturePath,
       ])
+
       const output = invalid.stdout.toString() + invalid.stderr.toString()
       expect(invalid.exitCode).toBe(1)
       expect(output).toContain("eslint(no-debugger)")

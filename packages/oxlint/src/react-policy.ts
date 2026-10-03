@@ -73,6 +73,33 @@ function restrictedHookName(
 export default eslintCompatPlugin({
   meta: { name: "react-policy" },
   rules: {
+    "prefer-named-imports": defineRule({
+      meta: {
+        type: "suggestion",
+        schema: [],
+        messages: {
+          namedImports:
+            "Use named imports from React instead of default or namespace imports.",
+        },
+      },
+      createOnce(context) {
+        return {
+          ImportDeclaration(node) {
+            if (node.source.value !== "react") return
+            for (const specifier of node.specifiers) {
+              if (
+                specifier.type !== "ImportSpecifier" ||
+                (specifier.imported.type === "Identifier"
+                  ? specifier.imported.name
+                  : specifier.imported.value) === "default"
+              ) {
+                context.report({ node: specifier, messageId: "namedImports" })
+              }
+            }
+          },
+        }
+      },
+    }),
     "no-restricted-hooks": defineRule({
       meta: {
         type: "suggestion",

@@ -16,5 +16,6 @@ export default defineConfig({
     ...reactDoctorConfig.rules,
     ...TANSTACK_QUERY_RULES,
     "react-policy/no-restricted-hooks": "warn",
+    "react-policy/prefer-named-imports": "error",
   },
 })
