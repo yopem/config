@@ -1,6 +1,6 @@
 # @yopem/oxlint-config
 
-Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React, Next.js, and Effect plugins are opt-in.
+Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React Doctor, native React, Next.js, and Effect plugins are opt-in.
 
 ## Installation
 
@@ -30,6 +30,21 @@ export default {
 ```
 
 Run `oxlint .` to lint. `quality/no-reduce-accumulator-copy` is paired with Oxlint's `oxc/no-accumulating-spread`.
+
+### React Doctor (optional)
+
+Add the React Doctor preset alongside base (and any other presets):
+
+```ts
+import baseConfig from "@yopem/oxlint-config";
+import reactDoctorConfig from "@yopem/oxlint-config/react-doctor";
+
+export default { extends: [baseConfig, reactDoctorConfig] };
+```
+
+This enables all standalone `react-doctor/*` lint rules, including framework-specific and opt-in rules at their upstream warning/error severities. Existing rules and options remain unchanged. Native presets may report overlapping diagnostics. Override individual `react-doctor/*` rules in your project's `rules` when needed.
+
+Project-level security scans and project-analysis checks do not run in the standalone plugin; use the React Doctor CLI for those checks.
 
 ### React (optional)
 

@@ -35,6 +35,10 @@
       "types": "./dist/presets/effect.d.ts",
       "default": "./dist/presets/effect.js"
     },
+    "./react-doctor": {
+      "types": "./dist/presets/react-doctor.d.ts",
+      "default": "./dist/presets/react-doctor.js"
+    },
     "./react": {
       "types": "./dist/presets/react.d.ts",
       "default": "./dist/presets/react.js"
@@ -50,12 +54,14 @@
   },
   "scripts": {
     "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --root=./src --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
+    "test": "bun run build && bun test ./test",
     "prepack": "bun run build"
   },
   "dependencies": {
     "@oxlint/plugins": "1.76.0",
     "eslint-plugin-oxfmt": "^0.22.0",
     "oxlint": "1.76.0",
+    "oxlint-plugin-react-doctor": "0.9.14",
     "oxlint-tsgolint": "^7.0.0"
   },
   "peerDependencies": {
