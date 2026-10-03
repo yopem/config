@@ -18,6 +18,57 @@ import {
   TANSTACK_START_RULES,
 } from "oxlint-plugin-react-doctor"
 
+test("React preset warns on restricted hooks without blocking other imports", () => {
+  const directory = mkdtempSync(join(tmpdir(), "oxlint-react-hooks-"))
+  const configPath = join(directory, "oxlint.config.ts")
+  const fixturePath = join(directory, "hooks.ts")
+  const oxlintPath = fileURLToPath(
+    new URL("../bin/oxlint", import.meta.resolve("oxlint")),
+  )
+
+  try {
+    writeFileSync(
+      configPath,
+      `import react from ${JSON.stringify(import.meta.resolve("@yopem/oxlint-config/react"))};
+export default { ...react, categories: { correctness: "off" } };`,
+    )
+
+    for (const source of [
+      'import { useCallback } from "react";',
+      'import { useEffect } from "react";',
+      'import { useCallback as callback, useEffect as effect } from "react";',
+      'import * as React from "react";',
+    ]) {
+      writeFileSync(fixturePath, source)
+      const result = Bun.spawnSync([
+        "node",
+        oxlintPath,
+        "-c",
+        configPath,
+        fixturePath,
+      ])
+      const output = result.stdout.toString() + result.stderr.toString()
+      expect(result.exitCode).toBe(0)
+      expect(output).toContain("eslint(no-restricted-imports)")
+      expect(output).not.toContain("Failed to load")
+    }
+
+    writeFileSync(fixturePath, 'import { useState } from "react";')
+    const result = Bun.spawnSync([
+      "node",
+      oxlintPath,
+      "-c",
+      configPath,
+      fixturePath,
+    ])
+    const output = result.stdout.toString() + result.stderr.toString()
+    expect(result.exitCode).toBe(0)
+    expect(output).not.toContain("eslint(no-restricted-imports)")
+  } finally {
+    rmSync(directory, { recursive: true, force: true })
+  }
+}, 30_000)
+
 function recommendedRule(key: string) {
   return key === "react-doctor/jsx-props-no-spreading"
     ? "warn"
