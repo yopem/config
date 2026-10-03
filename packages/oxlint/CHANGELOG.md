@@ -1,5 +1,21 @@
 # @yopem/oxlint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- [`e307c7f`](https://github.com/yopem/config/commit/e307c7f29e66ec3161a8ac861a35aba1d0fd4d38) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add StyleX exceptions to React Doctor rules
+
+  Enable StyleX-specific exceptions for `jsx-props-no-spreading` and
+  `jsx-no-new-array-as-prop` rules in React Doctor. Adjust framework
+  presets and tests to ensure compatibility with StyleX usage patterns.
+
+  feat(react-preset): add warnings for restricted hooks usage
+
+  Added `no-restricted-imports` rule to warn against `useCallback` and
+  `useEffect` imports in React preset. Updated tests to ensure proper
+  warnings and allow other imports without issues.
+
 ## 0.2.0
 
 ### Minor Changes
