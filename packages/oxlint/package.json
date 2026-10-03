@@ -35,9 +35,13 @@
       "types": "./dist/presets/effect.d.ts",
       "default": "./dist/presets/effect.js"
     },
-    "./react-doctor": {
-      "types": "./dist/presets/react-doctor.d.ts",
-      "default": "./dist/presets/react-doctor.js"
+    "./react-native": {
+      "types": "./dist/presets/react-native.d.ts",
+      "default": "./dist/presets/react-native.js"
+    },
+    "./tanstack-start": {
+      "types": "./dist/presets/tanstack-start.d.ts",
+      "default": "./dist/presets/tanstack-start.js"
     },
     "./react": {
       "types": "./dist/presets/react.d.ts",

@@ -1,6 +1,6 @@
 # @yopem/oxlint-config
 
-Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React Doctor, native React, Next.js, and Effect plugins are opt-in.
+Shared Oxlint rules, including `quality/*` and `stylistic/*`, alongside ESLint, TypeScript, and formatter rules. React, Next.js, React Native, TanStack Start, and Effect presets are opt-in. Each React framework preset includes React Doctor's recommended rules.
 
 ## Installation
 
@@ -31,21 +31,6 @@ export default {
 
 Run `oxlint .` to lint. `quality/no-reduce-accumulator-copy` is paired with Oxlint's `oxc/no-accumulating-spread`.
 
-### React Doctor (optional)
-
-Add the React Doctor preset alongside base (and any other presets):
-
-```ts
-import baseConfig from "@yopem/oxlint-config";
-import reactDoctorConfig from "@yopem/oxlint-config/react-doctor";
-
-export default { extends: [baseConfig, reactDoctorConfig] };
-```
-
-This enables all standalone `react-doctor/*` lint rules, including framework-specific and opt-in rules at their upstream warning/error severities. Existing rules and options remain unchanged. Native presets may report overlapping diagnostics. Override individual `react-doctor/*` rules in your project's `rules` when needed.
-
-Project-level security scans and project-analysis checks do not run in the standalone plugin; use the React Doctor CLI for those checks.
-
 ### React (optional)
 
 Add the React preset alongside base:
@@ -57,7 +42,7 @@ import reactConfig from "@yopem/oxlint-config/react";
 export default { extends: [baseConfig, reactConfig] };
 ```
 
-This enables `jsx-a11y`, `react`, and `react-perf`.
+This enables `jsx-a11y`, `react`, and `react-perf`, plus React Doctor's `RECOMMENDED_RULES` and `TANSTACK_QUERY_RULES`.
 
 ### Next.js (optional)
 
@@ -71,7 +56,36 @@ import nextjsConfig from "@yopem/oxlint-config/nextjs";
 export default { extends: [baseConfig, reactConfig, nextjsConfig] };
 ```
 
-This enables `nextjs` without implicitly enabling other plugins.
+This enables `nextjs`, plus React Doctor's `RECOMMENDED_RULES` and `NEXTJS_RULES`.
+
+### React Native (optional)
+
+```ts
+import baseConfig from "@yopem/oxlint-config";
+import reactNativeConfig from "@yopem/oxlint-config/react-native";
+
+export default { extends: [baseConfig, reactNativeConfig] };
+```
+
+This enables React Doctor's `RECOMMENDED_RULES` and `REACT_NATIVE_RULES`, including Expo rules, without enabling Oxlint's DOM accessibility plugin.
+
+### TanStack Start (optional)
+
+```ts
+import baseConfig from "@yopem/oxlint-config";
+import reactConfig from "@yopem/oxlint-config/react";
+import tanstackStartConfig from "@yopem/oxlint-config/tanstack-start";
+
+export default { extends: [baseConfig, reactConfig, tanstackStartConfig] };
+```
+
+This adds React Doctor's `RECOMMENDED_RULES` and `TANSTACK_START_RULES`. The React preset supplies TanStack Query rules.
+
+### React Doctor rules
+
+All four framework presets use the upstream exported rule maps at their warning/error severities. Upstream opt-in rules and Preact rules are not enabled. `react-doctor/react-in-jsx-scope`, `react-doctor/jsx-no-jsx-as-prop`, `react-doctor/jsx-max-depth`, and `react-doctor/only-export-components` are disabled in every preset. Override individual rules in your project's `rules` when needed.
+
+Project-level security scans and project-analysis checks do not run in the standalone plugin; use the React Doctor CLI for those checks.
 
 ### Effect (optional)
 
