@@ -13,5 +13,10 @@ export default defineConfig({
     newlinesBetween: true,
   },
   experimentalSortPackageJson: true,
-  ignorePatterns: ["**/bun.lock", "**/AGENTS.md", "**/eslint/**"],
+  ignorePatterns: [
+    "**/bun.lock",
+    "**/AGENTS.md",
+    "**/CHANGELOG.md",
+    "**/eslint/**",
+  ],
 })
