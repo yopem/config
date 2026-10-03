@@ -18,7 +18,7 @@ import {
   TANSTACK_START_RULES,
 } from "oxlint-plugin-react-doctor"
 
-test("React preset warns on restricted hooks without blocking other imports", () => {
+test("React preset warns on restricted hook calls with actionable messages", () => {
   const directory = mkdtempSync(join(tmpdir(), "oxlint-react-hooks-"))
   const configPath = join(directory, "oxlint.config.ts")
   const fixturePath = join(directory, "hooks.ts")
@@ -33,13 +33,77 @@ test("React preset warns on restricted hooks without blocking other imports", ()
 export default { ...react, categories: { correctness: "off" } };`,
     )
 
-    for (const source of [
-      'import { useCallback } from "react";',
-      'import { useEffect } from "react";',
-      'import { useCallback as callback, useEffect as effect } from "react";',
-      'import * as React from "react";',
+    for (const [imports, call, message] of [
+      [
+        'import { useCallback } from "react";',
+        "useCallback(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        'import { useMemo } from "react";',
+        "useMemo(() => 1, [])",
+        "Rely on React Compiler for memoization instead of useMemo.",
+      ],
+      [
+        'import { useMemo as memo } from "react";',
+        "memo(() => 1, [])",
+        "Rely on React Compiler for memoization instead of useMemo.",
+      ],
+      [
+        'import * as React from "react";',
+        "React.useMemo(() => 1, [])",
+        "Rely on React Compiler for memoization instead of useMemo.",
+      ],
+      [
+        'import { useEffect } from "react";',
+        "useEffect(() => {}, [])",
+        "Prefer derived values, event handlers, or framework APIs instead of useEffect.",
+      ],
+      [
+        'import { useCallback as callback } from "react";',
+        "callback(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        'import * as React from "react";',
+        "React.useCallback(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        'import React from "react";',
+        'React["useEffect"](() => {}, [])',
+        "Prefer derived values, event handlers, or framework APIs instead of useEffect.",
+      ],
+      [
+        'import { useCallback } from "react"; const callback = useCallback;',
+        "callback(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        "",
+        "useCallback(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        'import React from "react"; const { useEffect: effect } = React;',
+        "effect(() => {}, [])",
+        "Prefer derived values, event handlers, or framework APIs instead of useEffect.",
+      ],
+      [
+        'import * as R from "react";',
+        "R.useCallback?.(() => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
+      [
+        'import { useCallback } from "react";',
+        "useCallback.call(null, () => {}, [])",
+        "Rely on React Compiler for memoization instead of useCallback.",
+      ],
     ]) {
-      writeFileSync(fixturePath, source)
+      writeFileSync(
+        fixturePath,
+        `${imports}\nexport function Component() { ${call}; return null; }`,
+      )
       const result = Bun.spawnSync([
         "node",
         oxlintPath,
@@ -49,11 +113,15 @@ export default { ...react, categories: { correctness: "off" } };`,
       ])
       const output = result.stdout.toString() + result.stderr.toString()
       expect(result.exitCode).toBe(0)
-      expect(output).toContain("eslint(no-restricted-imports)")
+      expect(output).toContain("react-policy(no-restricted-hooks)")
+      expect(output.replace(/\s+/g, " ")).toContain(message)
       expect(output).not.toContain("Failed to load")
     }
 
-    writeFileSync(fixturePath, 'import { useState } from "react";')
+    writeFileSync(
+      fixturePath,
+      'import { useCallback, useEffect, useMemo, useState } from "react"; export function Component() { useState(0); return null; }',
+    )
     const result = Bun.spawnSync([
       "node",
       oxlintPath,
@@ -63,7 +131,7 @@ export default { ...react, categories: { correctness: "off" } };`,
     ])
     const output = result.stdout.toString() + result.stderr.toString()
     expect(result.exitCode).toBe(0)
-    expect(output).not.toContain("eslint(no-restricted-imports)")
+    expect(output).not.toContain("react-policy(no-restricted-hooks)")
   } finally {
     rmSync(directory, { recursive: true, force: true })
   }
