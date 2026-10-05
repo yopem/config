@@ -63,13 +63,13 @@
   },
   "dependencies": {
     "@oxlint/plugins": "1.76.0",
-    "eslint-plugin-oxfmt": "^0.22.0",
+    "eslint-plugin-oxfmt": "^0.26.0",
     "oxlint": "1.76.0",
     "oxlint-plugin-react-doctor": "0.9.14",
     "oxlint-tsgolint": "^7.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-oxfmt": "^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0",
+    "eslint-plugin-oxfmt": "^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0 || ^0.26.0",
     "oxlint": "^1.76.0"
   }
 }
