@@ -1,5 +1,6 @@
 ---
 "@yopem/oxlint-config": patch
+---
 
 feat(oxlint): add restrictUseEffect option to no-restricted-hooks
 
