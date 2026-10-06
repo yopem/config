@@ -106,19 +106,35 @@ export default { ...react, categories: { correctness: "off" }, rules: { ...react
         `${imports}\nexport function Component() { ${call}; return null; }`,
       )
 
-      const result = Bun.spawnSync([
-        "node",
-        oxlintPath,
-        "-c",
-        configPath,
-        fixturePath,
-      ])
+      for (const restrictUseEffect of [undefined, false, true]) {
+        const setting =
+          restrictUseEffect === undefined
+            ? "warn"
+            : ["warn", { restrictUseEffect }]
+        writeFileSync(
+          configPath,
+          `import react from ${JSON.stringify(import.meta.resolve("@yopem/oxlint-config/react"))};
+export default { ...react, categories: { correctness: "off" }, rules: { ...react.rules, "react-policy/prefer-named-imports": "off", "react-policy/no-restricted-hooks": ${JSON.stringify(setting)} } };`,
+        )
 
-      const output = result.stdout.toString() + result.stderr.toString()
-      expect(result.exitCode).toBe(0)
-      expect(output).toContain("react-policy(no-restricted-hooks)")
-      expect(output.replace(/\s+/g, " ")).toContain(message)
-      expect(output).not.toContain("Failed to load")
+        const result = Bun.spawnSync([
+          "node",
+          oxlintPath,
+          "-c",
+          configPath,
+          fixturePath,
+        ])
+
+        const output = result.stdout.toString() + result.stderr.toString()
+        const restricted =
+          !message.includes("useEffect") || restrictUseEffect === true
+        expect(result.exitCode).toBe(0)
+        expect(output.includes("react-policy(no-restricted-hooks)")).toBe(
+          restricted,
+        )
+        expect(output.replace(/\s+/g, " ").includes(message)).toBe(restricted)
+        expect(output).not.toContain("Failed to load")
+      }
     }
 
     writeFileSync(

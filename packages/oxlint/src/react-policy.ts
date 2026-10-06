@@ -103,7 +103,16 @@ export default eslintCompatPlugin({
     "no-restricted-hooks": defineRule({
       meta: {
         type: "suggestion",
-        schema: [],
+        schema: [
+          {
+            type: "object",
+            properties: {
+              restrictUseEffect: { type: "boolean" },
+            },
+            additionalProperties: false,
+          },
+        ],
+        defaultOptions: [{ restrictUseEffect: false }],
         messages: {
           useCallback:
             "Rely on React Compiler for memoization instead of useCallback.",
@@ -121,7 +130,15 @@ export default eslintCompatPlugin({
             )
               return
             const hook = restrictedHookName(node.callee, context.sourceCode)
-            if (hook) context.report({ node, messageId: hook })
+            const option = context.options?.[0]
+            const restrictUseEffect =
+              typeof option === "object" &&
+              option !== null &&
+              !Array.isArray(option) &&
+              option.restrictUseEffect === true
+            if (hook && (hook !== "useEffect" || restrictUseEffect)) {
+              context.report({ node, messageId: hook })
+            }
           },
         }
       },

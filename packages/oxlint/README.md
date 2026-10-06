@@ -49,6 +49,15 @@ export default { extends: [baseConfig, reactConfig] }
 This enables `jsx-a11y`, `react`, and `react-perf`, plus React Doctor's
 `RECOMMENDED_RULES` and `TANSTACK_QUERY_RULES`.
 
+`react-policy/no-restricted-hooks` warns on `useCallback` and `useMemo` calls.
+The `useEffect` restriction is off by default. To enable it, add:
+
+```ts
+rules: {
+  "react-policy/no-restricted-hooks": ["warn", { restrictUseEffect: true }],
+}
+```
+
 ### Next.js (optional)
 
 Add the Next.js preset alongside base and React:
