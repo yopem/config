@@ -1,5 +1,19 @@
 # @yopem/oxlint-config
 
+## 0.3.3
+
+### Patch Changes
+
+- [`3c40c48`](https://github.com/yopem/config/commit/3c40c485a094cedf2c54a7ef33c7b6f9f99e346e) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add restrictUseEffect option to no-restricted-hooks
+
+  - Update `no-restricted-hooks` rule to support `restrictUseEffect` option.
+  - Modify schema to include `restrictUseEffect` as a boolean property.
+  - Default `restrictUseEffect` to `false` in rule options.
+  - Add logic to conditionally restrict `useEffect` based on the option.
+  - Update tests to validate `restrictUseEffect` behavior.
+  - Document the new option in `README.md` with usage examples.
+  - Bump package versions for `oxfmt` and `oxlint` in `bun.lock`.
+
 ## 0.3.2
 
 ### Patch Changes
