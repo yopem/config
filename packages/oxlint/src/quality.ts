@@ -16,11 +16,14 @@ import { noUnknownReturnsRule } from "./rules/no-unknown-returns.ts"
 import { noUnknownTypeAliasesRule } from "./rules/no-unknown-type-aliases.ts"
 import { noUnsafeDictionaryTypeRule } from "./rules/no-unsafe-dictionary-type.ts"
 import { noWidenThenAssertRule } from "./rules/no-widen-then-assert.ts"
+import { preferArrowForAnonymousFunctionsRule } from "./rules/prefer-arrow-for-anonymous-functions.ts"
 import { requireSafetyCommentForTypeAssertionRule } from "./rules/require-safety-comment-for-type-assertion.ts"
 
 export default eslintCompatPlugin({
   meta: { name: "quality" },
   rules: {
+    "prefer-arrow-for-anonymous-functions":
+      preferArrowForAnonymousFunctionsRule,
     "no-array-filter-map": noArrayFilterMapRule,
     "no-reduce-accumulator-copy": noReduceAccumulatorCopyRule,
     "no-chained-type-assertions": noChainedTypeAssertionsRule,

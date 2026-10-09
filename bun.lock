@@ -68,7 +68,7 @@
     },
     "packages/oxlint": {
       "name": "@yopem/oxlint-config",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "dependencies": {
         "@oxlint/plugins": "1.76.0",
         "eslint-plugin-oxfmt": "^0.26.0",

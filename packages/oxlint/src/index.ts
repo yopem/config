@@ -1,6 +1,10 @@
 import { defineConfig } from "oxlint"
 
 export default defineConfig({
+  options: {
+    typeAware: true,
+    typeCheck: true,
+  },
   plugins: ["eslint", "import", "oxc", "promise", "typescript", "unicorn"],
   jsPlugins: [
     import.meta.resolve("eslint-plugin-oxfmt"),
@@ -21,6 +25,7 @@ export default defineConfig({
   },
   rules: {
     "oxc/no-accumulating-spread": "error",
+    "quality/prefer-arrow-for-anonymous-functions": "error",
     "quality/no-array-filter-map": "error",
     "quality/no-reduce-accumulator-copy": "error",
     "quality/no-chained-type-assertions": "error",

@@ -28,12 +28,33 @@ import baseConfig from "@yopem/oxlint-config"
 
 export default {
   extends: [baseConfig],
+  options: baseConfig.options,
   rules: { "quality/no-module-mocking": "warn" },
 }
 ```
 
-Run `oxlint .` to lint. `quality/no-reduce-accumulator-copy` is paired with
-Oxlint's `oxc/no-accumulating-spread`.
+Run `oxlint .` to lint. Base sets `options.typeAware` and `options.typeCheck` to
+`true`. Oxlint uses `oxlint-tsgolint`, which this package includes, for these
+checks. Your project needs a `tsconfig.json`.
+
+Oxlint reads these options from the root config only. Set
+`options: baseConfig.options` when you use `extends`, as shown above. To turn
+these checks off, set both options to `false` in your root config.
+
+`quality/no-reduce-accumulator-copy` is paired with Oxlint's
+`oxc/no-accumulating-spread`.
+
+`quality/prefer-arrow-for-anonymous-functions` is an error in base. Use arrow
+functions for anonymous function expressions, including callbacks. Named
+functions, methods, accessors, and generators are allowed. The rule does not
+check function declarations. It has no automatic fix: arrows change `this` and
+`arguments`. Use a named function when you need these bindings.
+
+```ts
+const handleReset = useEventCallback(() => {
+  setPressCount(0)
+})
+```
 
 ### React (optional)
 
@@ -43,7 +64,10 @@ Add the React preset alongside base:
 import baseConfig from "@yopem/oxlint-config"
 import reactConfig from "@yopem/oxlint-config/react"
 
-export default { extends: [baseConfig, reactConfig] }
+export default {
+  extends: [baseConfig, reactConfig],
+  options: baseConfig.options,
+}
 ```
 
 This enables `jsx-a11y`, `react`, and `react-perf`, plus React Doctor's
@@ -67,7 +91,10 @@ import baseConfig from "@yopem/oxlint-config"
 import reactConfig from "@yopem/oxlint-config/react"
 import nextjsConfig from "@yopem/oxlint-config/nextjs"
 
-export default { extends: [baseConfig, reactConfig, nextjsConfig] }
+export default {
+  extends: [baseConfig, reactConfig, nextjsConfig],
+  options: baseConfig.options,
+}
 ```
 
 This enables `nextjs`, plus React Doctor's `RECOMMENDED_RULES` and
@@ -79,7 +106,10 @@ This enables `nextjs`, plus React Doctor's `RECOMMENDED_RULES` and
 import baseConfig from "@yopem/oxlint-config"
 import reactNativeConfig from "@yopem/oxlint-config/react-native"
 
-export default { extends: [baseConfig, reactNativeConfig] }
+export default {
+  extends: [baseConfig, reactNativeConfig],
+  options: baseConfig.options,
+}
 ```
 
 This enables React Doctor's `RECOMMENDED_RULES` and `REACT_NATIVE_RULES`,
@@ -92,7 +122,10 @@ import baseConfig from "@yopem/oxlint-config"
 import reactConfig from "@yopem/oxlint-config/react"
 import tanstackStartConfig from "@yopem/oxlint-config/tanstack-start"
 
-export default { extends: [baseConfig, reactConfig, tanstackStartConfig] }
+export default {
+  extends: [baseConfig, reactConfig, tanstackStartConfig],
+  options: baseConfig.options,
+}
 ```
 
 This adds React Doctor's `RECOMMENDED_RULES` and `TANSTACK_START_RULES`. The
@@ -103,9 +136,10 @@ React preset supplies TanStack Query rules.
 All four framework presets use the upstream exported rule maps at their
 warning/error severities. Upstream opt-in rules and Preact rules are not
 enabled. `react-doctor/react-in-jsx-scope`, `react-doctor/jsx-no-jsx-as-prop`,
-`react-doctor/jsx-max-depth`, and `react-doctor/only-export-components` are
-disabled in every preset. Override individual rules in your project's `rules`
-when needed.
+`react-doctor/jsx-max-depth`, `react-doctor/only-export-components`, and
+`react-doctor/context-provider-value-from-unmemoized-local-literal` are disabled
+in every preset. Override individual rules in your project's `rules` when
+needed.
 
 `react-doctor/jsx-props-no-spreading` is enabled at warning severity. Direct
 `props(...)` calls imported from `@stylexjs/stylex`, including namespace,
@@ -129,7 +163,10 @@ Add the Effect preset alongside base (and any other presets):
 import baseConfig from "@yopem/oxlint-config"
 import effectConfig from "@yopem/oxlint-config/effect"
 
-export default { extends: [baseConfig, effectConfig] }
+export default {
+  extends: [baseConfig, effectConfig],
+  options: baseConfig.options,
+}
 ```
 
 This enables `effect/*`.
