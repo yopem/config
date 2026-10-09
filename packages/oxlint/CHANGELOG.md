@@ -1,5 +1,24 @@
 # @yopem/oxlint-config
 
+## 0.4.0
+
+### Minor Changes
+
+- [`0c17a79`](https://github.com/yopem/config/commit/0c17a79067d56aba45405fcfb1111f3a73f457bb) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add arrow function rule and update configs
+
+  - Bump @yopem/oxlint-config version to 0.3.3 in bun.lock.
+  - Add `options.typeAware` and `options.typeCheck` to base config.
+  - Introduce `quality/prefer-arrow-for-anonymous-functions` rule:
+    - Enforce arrow functions for anonymous function expressions.
+    - Allow named functions, methods, accessors, and generators.
+    - No auto-fix due to `this` and `arguments` behavior.
+      k- Update README.md:
+    - Document new rule and its usage.
+    - Add `options: baseConfig.options` in all examples.
+    - Clarify disabled rules in framework presets.
+  - Modify `src/index.ts` and `src/quality.ts` to include the new rule.
+  - Add `prefer-arrow-for-anonymous-functions.ts` rule implementation.
+
 ## 0.3.3
 
 ### Patch Changes
