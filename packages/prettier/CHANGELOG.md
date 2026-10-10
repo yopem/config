@@ -1,5 +1,11 @@
 # @yopem/prettier-config
 
+## 0.1.14
+
+### Patch Changes
+
+- [`21e5f80`](https://github.com/yopem/config/commit/21e5f80608d646476777b88730fff8ada4c4493a) Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(docs): remove deno install instructions
+
 ## 0.1.13
 
 ### Patch Changes
@@ -138,7 +144,6 @@
   dependencies to use workspace versions
 
   Updated various package dependencies to use workspace versions:
-
   - Changed @yopem/typescript-config to workspace:\* in bun.lock,
     packages/eslint/package.json, and packages/prettier/package.json.
   - Updated @ianvs/prettier-plugin-sort-imports, prettier, and
