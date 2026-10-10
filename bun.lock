@@ -9,10 +9,12 @@
         "@changesets/cli": "2.31.1",
         "@changesets/get-release-plan": "4.0.16",
         "@changesets/types": "6.1.0",
+        "@ianvs/prettier-plugin-sort-imports": "4.7.1",
         "@yopem/oxfmt-config": "*",
         "@yopem/oxlint-config": "*",
         "lefthook": "2.1.10",
         "oxfmt": "^0.71.0",
+        "prettier": "3.6.2",
         "turbo": "2.10.6",
         "typescript": "5.9.3",
       },
@@ -68,7 +70,7 @@
     },
     "packages/oxlint": {
       "name": "@yopem/oxlint-config",
-      "version": "0.3.3",
+      "version": "0.4.0",
       "dependencies": {
         "@oxlint/plugins": "1.76.0",
         "eslint-plugin-oxfmt": "^0.26.0",
@@ -83,6 +85,7 @@
       "peerDependencies": {
         "eslint-plugin-oxfmt": "^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0 || ^0.26.0",
         "oxlint": "^1.76.0",
+        "oxlint-tsgolint": "^7.0.0",
       },
     },
     "packages/prettier": {
