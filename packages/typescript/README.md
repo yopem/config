@@ -12,8 +12,6 @@ pnpm add @yopem/typescript-config
 yarn add @yopem/typescript-config
 # or
 bun add @yopem/typescript-config
-# or
-deno install npm:@yopem/typescript-config
 ```
 
 ## Licence

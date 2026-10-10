@@ -15,8 +15,6 @@ pnpm add @yopem/oxlint-config
 yarn add @yopem/oxlint-config
 # or
 bun add @yopem/oxlint-config
-# or
-deno install npm:@yopem/oxlint-config
 ```
 
 ## Extend
@@ -100,8 +98,8 @@ Add the Next.js preset alongside base and React:
 
 ```ts
 import baseConfig from "@yopem/oxlint-config"
-import reactConfig from "@yopem/oxlint-config/react"
 import nextjsConfig from "@yopem/oxlint-config/nextjs"
+import reactConfig from "@yopem/oxlint-config/react"
 
 export default {
   extends: [baseConfig, reactConfig, nextjsConfig],

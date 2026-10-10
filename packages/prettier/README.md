@@ -12,8 +12,6 @@ pnpm add @yopem/prettier-config
 yarn add @yopem/prettier-config
 # or
 bun add @yopem/prettier-config
-# or
-deno install npm:@yopem/prettier-config
 ```
 
 ## Licence

@@ -12,8 +12,6 @@ pnpm add @yopem/eslint-config
 yarn add @yopem/eslint-config
 # or
 bun add @yopem/eslint-config
-# or
-deno install npm:@yopem/eslint-config
 ```
 
 ## Licence

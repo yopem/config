@@ -12,8 +12,6 @@ pnpm add @yopem/oxfmt-config
 yarn add @yopem/oxfmt-config
 # or
 bun add @yopem/oxfmt-config
-# or
-deno install npm:@yopem/oxfmt-config
 ```
 
 ## Licence
