@@ -50,10 +50,22 @@ functions, methods, accessors, and generators are allowed. The rule does not
 check function declarations. It has no automatic fix: arrows change `this` and
 `arguments`. Use a named function when you need these bindings.
 
+Arrow functions with or without parameter parentheses are allowed:
+
 ```ts
+const getCount = () => 0
+const getValue = (value: number) => value
 const handleReset = useEventCallback(() => {
   setPressCount(0)
 })
+```
+
+Anonymous `function () {}` expressions are not allowed:
+
+```ts
+const getCount = function () {
+  return 0
+}
 ```
 
 ### React (optional)
