@@ -29,6 +29,8 @@ export default defineConfig({
     "quality/no-array-filter-map": "error",
     "quality/no-reduce-accumulator-copy": "error",
     "quality/no-chained-type-assertions": "error",
+    "quality/no-catch-variable-type-assertion": "error",
+    "quality/no-json-parse-type-assertion": "error",
     "quality/no-conditional-empty-object-spread": "error",
     "quality/no-known-value-widening": "error",
     "quality/no-module-mocking": "error",

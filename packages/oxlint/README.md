@@ -66,6 +66,38 @@ const getCount = function () {
 }
 ```
 
+### Type assertions at data boundaries
+
+Base enables these rules as errors:
+
+- `quality/no-json-parse-type-assertion`: Do not cast a direct global
+  `JSON.parse(...)` result to a domain type. Validate parsed data first. Local
+  or imported objects named `JSON` are not checked.
+- `quality/no-catch-variable-type-assertion`: Do not cast a catch binding to
+  `Error` or another type. Use a type guard or a validator. This includes
+  destructured catch bindings and references inside nested functions.
+
+Both rules check `as` and angle-bracket assertions, including parentheses and
+assertion chains. An assertion to `unknown` is allowed. They do not track values
+through aliases, inspect catch properties, or check validator results. Neither
+rule has an automatic fix: validation needs a runtime check.
+
+```ts
+// Not allowed:
+const user = JSON.parse(text) as User
+
+// Validate instead:
+const user = userSchema.parse(JSON.parse(text))
+
+try {
+  run()
+} catch (error) {
+  if (error instanceof Error) {
+    report(error.message)
+  }
+}
+```
+
 ### React (optional)
 
 Add the React preset alongside base:

@@ -1,8 +1,10 @@
 import { eslintCompatPlugin } from "@oxlint/plugins"
 
 import { noArrayFilterMapRule } from "./rules/no-array-filter-map.ts"
+import { noCatchVariableTypeAssertionRule } from "./rules/no-catch-variable-type-assertion.ts"
 import { noChainedTypeAssertionsRule } from "./rules/no-chained-type-assertions.ts"
 import { noConditionalEmptyObjectSpreadRule } from "./rules/no-conditional-empty-object-spread.ts"
+import { noJsonParseTypeAssertionRule } from "./rules/no-json-parse-type-assertion.ts"
 import { noKnownValueWideningRule } from "./rules/no-known-value-widening.ts"
 import { noModuleMockingRule } from "./rules/no-module-mocking.ts"
 import { noObjectParametersRule } from "./rules/no-object-parameters.ts"
@@ -25,6 +27,8 @@ export default eslintCompatPlugin({
     "prefer-arrow-for-anonymous-functions":
       preferArrowForAnonymousFunctionsRule,
     "no-array-filter-map": noArrayFilterMapRule,
+    "no-catch-variable-type-assertion": noCatchVariableTypeAssertionRule,
+    "no-json-parse-type-assertion": noJsonParseTypeAssertionRule,
     "no-reduce-accumulator-copy": noReduceAccumulatorCopyRule,
     "no-chained-type-assertions": noChainedTypeAssertionsRule,
     "no-conditional-empty-object-spread": noConditionalEmptyObjectSpreadRule,
