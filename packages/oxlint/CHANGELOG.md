@@ -1,11 +1,32 @@
 # @yopem/oxlint-config
 
+## 0.5.0
+
+### Minor Changes
+
+- [`0c96773`](https://github.com/yopem/config/commit/0c967733a97550490d2ed0aa77857ba3a76f6480) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(quality): add rules for type assertions at boundaries
+
+  Add two new lint rules to improve type safety:
+  - `quality/no-json-parse-type-assertion`: Prevent direct type assertions
+    on `JSON.parse(...)` results. Require validation of parsed data.
+  - `quality/no-catch-variable-type-assertion`: Disallow type assertions
+    on catch bindings. Use type guards or validators instead.
+
+  Update the configuration to enable these rules as errors. Include
+  detailed documentation and examples in the README. Implement shared
+  utilities for assertion source handling and scope resolution.
+
+### Patch Changes
+
+- [`21e5f80`](https://github.com/yopem/config/commit/21e5f80608d646476777b88730fff8ada4c4493a) Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(docs): remove deno install instructions
+
+- [`137cee4`](https://github.com/yopem/config/commit/137cee46889fb449e84b8abb0e5a80998ae33578) Thanks [@karyanayandi](https://github.com/karyanayandi)! - fix: make oxlint-tsgolint as pear dependencies
+
 ## 0.4.0
 
 ### Minor Changes
 
 - [`0c17a79`](https://github.com/yopem/config/commit/0c17a79067d56aba45405fcfb1111f3a73f457bb) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add arrow function rule and update configs
-
   - Bump @yopem/oxlint-config version to 0.3.3 in bun.lock.
   - Add `options.typeAware` and `options.typeCheck` to base config.
   - Introduce `quality/prefer-arrow-for-anonymous-functions` rule:
@@ -24,7 +45,6 @@
 ### Patch Changes
 
 - [`3c40c48`](https://github.com/yopem/config/commit/3c40c485a094cedf2c54a7ef33c7b6f9f99e346e) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add restrictUseEffect option to no-restricted-hooks
-
   - Update `no-restricted-hooks` rule to support `restrictUseEffect` option.
   - Modify schema to include `restrictUseEffect` as a boolean property.
   - Default `restrictUseEffect` to `false` in rule options.

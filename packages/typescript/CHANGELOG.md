@@ -1,5 +1,11 @@
 # @yopem/typescript-config
 
+## 0.2.4
+
+### Patch Changes
+
+- [`21e5f80`](https://github.com/yopem/config/commit/21e5f80608d646476777b88730fff8ada4c4493a) Thanks [@karyanayandi](https://github.com/karyanayandi)! - refactor(docs): remove deno install instructions
+
 ## 0.2.3
 
 ### Patch Changes
