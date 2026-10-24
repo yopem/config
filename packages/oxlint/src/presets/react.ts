@@ -15,7 +15,24 @@ export default defineConfig({
   rules: {
     ...reactDoctorConfig.rules,
     ...TANSTACK_QUERY_RULES,
-    "react-policy/no-restricted-hooks": "warn",
+    "react-doctor/prefer-dynamic-import": "off",
+    "react/unsupported-syntax": "error",
+    "react-policy/no-restricted-hooks": ["error", { restrictUseEffect: true }],
+    "react-policy/require-export-function": "error",
+    "react-policy/no-query-result-spread": "error",
     "react-policy/prefer-named-imports": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        paths: [
+          {
+            name: "react",
+            importNames: ["useEffect", "useCallback", "useMemo"],
+            message:
+              "Use derived values, event handlers, framework APIs, and React Compiler.",
+          },
+        ],
+      },
+    ],
   },
 })

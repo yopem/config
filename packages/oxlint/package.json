@@ -59,6 +59,7 @@
   "scripts": {
     "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --root=./src --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
     "test": "bun run build && bun test ./test",
+    "typecheck": "bun run build && tsc --noEmit",
     "prepack": "bun run build"
   },
   "dependencies": {
