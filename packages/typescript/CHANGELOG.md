@@ -1,5 +1,11 @@
 # @yopem/typescript-config
 
+## 0.2.5
+
+### Patch Changes
+
+- [`de84e9c`](https://github.com/yopem/config/commit/de84e9c10e79be015bb3efeabaef680f9c6fc898) Thanks [@karyanayandi](https://github.com/karyanayandi)! - Publish a new release to validate npm trusted publishing. Package behavior is unchanged.
+
 ## 0.2.4
 
 ### Patch Changes
