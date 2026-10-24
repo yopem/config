@@ -3,6 +3,11 @@ pre-commit:
     quality:
       run: bun fmt:write && bun lint && bun typecheck
 
+post-commit:
+  commands:
+    changeset:
+      run: bun scripts/changeset.mjs
+
 pre-push:
   commands:
     quality:
