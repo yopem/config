@@ -1,7 +1,9 @@
 import nextPlugin from "@next/eslint-plugin-next"
+import yopem from "@yopem/eslint-plugin"
 
 /** @type {Awaited<import('typescript-eslint').Config>} */
 export default [
+  ...yopem.configs.nextjs,
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {

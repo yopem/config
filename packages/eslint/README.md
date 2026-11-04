@@ -1,5 +1,19 @@
 # @yopem/eslint-config
 
+The base config uses `@yopem/eslint-plugin` for shared custom rules. Oxlint
+uses the same package. Core and typed rules use each engine's native checks.
+
+```js
+import base from "@yopem/eslint-config/base"
+import react from "@yopem/eslint-config/react"
+
+export default [...base, ...react]
+```
+
+Other presets: `/nextjs`, `/effect`, `/react-native`, and `/tanstack-start`.
+Typed files need a TypeScript project. JavaScript files do not use typed
+linting. See the plugin README for Bun setup and native rule differences.
+
 Yopem ESLint configuration.
 
 ## Installation

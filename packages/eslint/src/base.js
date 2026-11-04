@@ -5,6 +5,8 @@ import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { includeIgnoreFile } from "@eslint/compat"
 import eslint from "@eslint/js"
+import yopem from "@yopem/eslint-plugin"
+import { baseRules, ignorePatterns } from "@yopem/eslint-plugin/policies"
 import eslintConfigPrettier from "eslint-config-prettier"
 import importPlugin from "eslint-plugin-import"
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
@@ -18,71 +20,68 @@ const gitignorePath = path.resolve(__dirname, ".gitignore")
 
 const prettierignorePath = path.resolve(__dirname, ".prettierignore")
 
+const nativeRules = Object.fromEntries(
+  Object.entries(baseRules).filter(
+    ([name]) => !name.startsWith("typescript/") && !name.startsWith("oxc/"),
+  ),
+)
+
+const typedRules = Object.fromEntries(
+  Object.entries(baseRules)
+    .filter(([name]) => !name.startsWith("oxc/"))
+    .flatMap(([name, setting]) => {
+      if (name.startsWith("typescript/"))
+        return [[name.replace("typescript/", "@typescript-eslint/"), setting]]
+
+      if (tseslint.plugin.rules[name]?.meta.docs?.extendsBaseRule)
+        return [
+          [name, "off"],
+          [`@typescript-eslint/${name}`, setting],
+        ]
+
+      return [[name, setting]]
+    }),
+)
+
 export default tseslint.config(
   fs.existsSync(gitignorePath) ? includeIgnoreFile(gitignorePath) : {},
   fs.existsSync(prettierignorePath)
     ? includeIgnoreFile(prettierignorePath)
     : {},
-  { ignores: ["**/*.config.*"] },
+  { ignores: ignorePatterns },
 
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   {
-    files: ["**/*.js", "**/*.ts", "**/*.tsx"],
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts}"],
     plugins: {
       import: importPlugin,
     },
+    extends: [eslint.configs.recommended, ...yopem.configs.recommended],
+    rules: nativeRules,
+    languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } },
+  },
+  {
+    files: ["**/*.{ts,tsx,mts,cts}"],
     extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
     ],
     rules: {
-      "no-console": "warn",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-      ],
-      "@typescript-eslint/consistent-type-imports": [
-        "warn",
-        { prefer: "type-imports", fixStyle: "separate-type-imports" },
-      ],
-      "@typescript-eslint/no-misused-promises": [
-        2,
-        { checksVoidReturn: { attributes: false } },
-      ],
+      ...typedRules,
       "@typescript-eslint/no-unnecessary-condition": [
         "error",
         {
           allowConstantLoopConditions: true,
         },
       ],
-      "@typescript-eslint/ban-ts-comment": "off",
       "@typescript-eslint/no-non-null-assertion": "error",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
       "@typescript-eslint/unbound-method": "off",
-      "import/consistent-type-specifier-style": ["off"],
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: ["../"],
-              message: `Relative imports are not allowed. Please use '@/' instead.`,
-            },
-          ],
-        },
-      ],
     },
+    languageOptions: { parserOptions: { projectService: true } },
   },
   {
     linterOptions: { reportUnusedDisableDirectives: true },
-    languageOptions: { parserOptions: { projectService: true } },
   },
 )
 

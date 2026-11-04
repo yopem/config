@@ -21,12 +21,13 @@
     },
     "packages/eslint": {
       "name": "@yopem/eslint-config",
-      "version": "0.3.7",
+      "version": "0.3.9",
       "dependencies": {
         "@eslint/compat": "2.1.0",
         "@eslint/js": "10.0.1",
         "@next/eslint-plugin-next": "16.2.11",
         "@types/eslint": "9.6.1",
+        "@yopem/eslint-plugin": "workspace:*",
         "eslint": "10.7.0",
         "eslint-config-prettier": "10.1.8",
         "eslint-plugin-import": "2.32.0",
@@ -58,9 +59,23 @@
         "typescript-eslint": "^8.25.0",
       },
     },
+    "packages/eslint-plugin": {
+      "name": "@yopem/eslint-plugin",
+      "version": "0.0.1",
+      "dependencies": {
+        "@oxlint/plugins": "^1.76.0",
+        "oxlint-plugin-react-doctor": "^0.9.14",
+      },
+      "devDependencies": {
+        "eslint": "^10.7.0",
+        "oxlint": "^1.76.0",
+        "typescript": "5.9.3",
+        "typescript-eslint": "8.65.0",
+      },
+    },
     "packages/oxfmt": {
       "name": "@yopem/oxfmt-config",
-      "version": "0.0.9",
+      "version": "0.0.11",
       "dependencies": {
         "oxfmt": "^0.71.0",
       },
@@ -70,17 +85,17 @@
     },
     "packages/oxlint": {
       "name": "@yopem/oxlint-config",
-      "version": "0.4.0",
+      "version": "0.7.1",
       "dependencies": {
-        "@oxlint/plugins": "1.76.0",
+        "@yopem/eslint-plugin": "workspace:*",
         "eslint-plugin-oxfmt": "^0.26.0",
         "oxlint": "1.76.0",
-        "oxlint-plugin-react-doctor": "0.9.14",
         "oxlint-tsgolint": "^7.0.0",
       },
       "devDependencies": {
         "@types/bun": "^1.4.2",
         "@types/node": "^26.6.5",
+        "oxlint-plugin-react-doctor": "0.9.14",
       },
       "peerDependencies": {
         "eslint-plugin-oxfmt": "^0.1.0 || ^0.15.0 || ^0.17.0 || ^0.18.0 || ^0.22.0 || ^0.26.0",
@@ -90,7 +105,7 @@
     },
     "packages/prettier": {
       "name": "@yopem/prettier-config",
-      "version": "0.1.13",
+      "version": "0.1.15",
       "dependencies": {
         "@ianvs/prettier-plugin-sort-imports": "4.7.1",
         "prettier": "3.6.2",
@@ -108,7 +123,7 @@
     },
     "packages/typescript": {
       "name": "@yopem/typescript-config",
-      "version": "0.2.3",
+      "version": "0.2.5",
     },
   },
   "packages": {
@@ -425,6 +440,8 @@
     "@typescript-eslint/visitor-keys": ["@typescript-eslint/visitor-keys@8.65.0", "", { "dependencies": { "@typescript-eslint/types": "8.65.0", "eslint-visitor-keys": "^5.0.0" } }, "sha512-8C71BQkGjiMmXtop7pHVJu1l2NNShFdkCyD6a2ezzs5vU/L3LRtb69EtcteFwz0mYMPzIgOw0n6OV4VBUWZd7A=="],
 
     "@yopem/eslint-config": ["@yopem/eslint-config@workspace:packages/eslint"],
+
+    "@yopem/eslint-plugin": ["@yopem/eslint-plugin@workspace:packages/eslint-plugin"],
 
     "@yopem/oxfmt-config": ["@yopem/oxfmt-config@workspace:packages/oxfmt"],
 

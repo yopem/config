@@ -1,0 +1,71 @@
+{
+  "name": "@yopem/eslint-plugin",
+  "version": "0.0.1",
+  "description": "Shared Yopem rules for ESLint, Oxlint, and Bun lint.",
+  "license": "MIT",
+  "author": "Karyana Yandi <karyana@yandi.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yopem/config.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./quality": {
+      "types": "./dist/quality.d.ts",
+      "default": "./dist/quality.js"
+    },
+    "./stylistic": {
+      "types": "./dist/stylistic.d.ts",
+      "default": "./dist/stylistic.js"
+    },
+    "./effect": {
+      "types": "./dist/effect/index.d.ts",
+      "default": "./dist/effect/index.js"
+    },
+    "./react-policy": {
+      "types": "./dist/react-policy.d.ts",
+      "default": "./dist/react-policy.js"
+    },
+    "./react-doctor": {
+      "types": "./dist/react-doctor.d.ts",
+      "default": "./dist/react-doctor.js"
+    },
+    "./policies": {
+      "types": "./dist/policies.d.ts",
+      "default": "./dist/policies.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun build ./src/*.ts ./src/effect/index.ts --target=node --root=./src --outdir=dist --packages=external && tsc && cp src/vendor/eslint-stylistic/padding-line-options.d.ts dist/vendor/eslint-stylistic/padding-line-options.d.ts",
+    "prepack": "bun run build",
+    "test": "bun run build && bun test ./test/compatibility.test.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --config ../../oxlint.config.ts ."
+  },
+  "dependencies": {
+    "@oxlint/plugins": "^1.76.0",
+    "oxlint-plugin-react-doctor": "^0.9.14"
+  },
+  "devDependencies": {
+    "eslint": "^10.7.0",
+    "oxlint": "^1.76.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.65.0"
+  }
+}
