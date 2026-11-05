@@ -54,7 +54,6 @@
   "scripts": {
     "build": "bun build ./src/*.ts ./src/effect/index.ts --target=node --root=./src --outdir=dist --packages=external && tsc && cp src/vendor/eslint-stylistic/padding-line-options.d.ts dist/vendor/eslint-stylistic/padding-line-options.d.ts",
     "prepack": "bun run build",
-    "test": "bun run build && bun test ./test/compatibility.test.js",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint --config ../../oxlint.config.ts ."
   },

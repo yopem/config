@@ -1,6 +1,8 @@
 import { eslintCompatPlugin } from "@oxlint/plugins"
 
+import { noArrayFilterExistenceRule } from "./rules/no-array-filter-existence.ts"
 import { noArrayFilterMapRule } from "./rules/no-array-filter-map.ts"
+import { noArraySortFirstRule } from "./rules/no-array-sort-first.ts"
 import { noCatchVariableTypeAssertionRule } from "./rules/no-catch-variable-type-assertion.ts"
 import { noChainedTypeAssertionsRule } from "./rules/no-chained-type-assertions.ts"
 import { noConditionalEmptyObjectSpreadRule } from "./rules/no-conditional-empty-object-spread.ts"
@@ -31,7 +33,9 @@ export default eslintCompatPlugin({
     "require-specific-suppression": requireSpecificSuppressionRule,
     "prefer-arrow-for-anonymous-functions":
       preferArrowForAnonymousFunctionsRule,
+    "no-array-filter-existence": noArrayFilterExistenceRule,
     "no-array-filter-map": noArrayFilterMapRule,
+    "no-array-sort-first": noArraySortFirstRule,
     "no-dynamic-import": noDynamicImportRule,
     "no-environment-access": noEnvironmentAccessRule,
     "no-reexport-only-modules": noReexportOnlyModulesRule,

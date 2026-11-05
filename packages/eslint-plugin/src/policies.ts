@@ -28,7 +28,9 @@ type RuleSetting =
 export const baseRules = {
   "oxc/no-accumulating-spread": "error",
   "quality/prefer-arrow-for-anonymous-functions": "error",
+  "quality/no-array-filter-existence": "error",
   "quality/no-array-filter-map": "error",
+  "quality/no-array-sort-first": "error",
   "quality/no-dynamic-import": "error",
   "quality/no-environment-access": "error",
   "quality/no-reexport-only-modules": "error",
