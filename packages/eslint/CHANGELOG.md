@@ -1,5 +1,22 @@
 # @yopem/eslint-config
 
+## 0.4.0
+
+### Minor Changes
+
+- [`729cfe0`](https://github.com/yopem/config/commit/729cfe08dc11247e251ac6d41e2aedc20a4c38f8)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(lint): share
+  custom lint rules
+
+  Add @yopem/eslint-plugin for ESLint, Oxlint, and Bun lint. Keep the current
+  rules and tests when resolving conflicts.
+
+### Patch Changes
+
+- Updated dependencies
+  [[`43b895c`](https://github.com/yopem/config/commit/43b895c888ff881d3a339b8087ab5b429b31cfbb)]:
+  - @yopem/eslint-plugin@0.0.2
+
 ## 0.3.9
 
 ### Patch Changes
