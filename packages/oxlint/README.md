@@ -40,7 +40,10 @@ Oxlint reads these options from the root config only. Set
 these checks off, set both options to `false` in your root config.
 
 `quality/no-reduce-accumulator-copy` is paired with Oxlint's
-`oxc/no-accumulating-spread`.
+`oxc/no-accumulating-spread`. Base also enables
+`quality/no-array-filter-existence` and `quality/no-array-sort-first`. These
+rules report known arrays only. Check callback side effects and sort behavior
+before changing the code.
 
 `quality/prefer-arrow-for-anonymous-functions` is an error in base. Use arrow
 functions for anonymous function expressions, including callbacks. Named

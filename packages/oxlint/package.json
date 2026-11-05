@@ -19,6 +19,7 @@
   },
   "files": [
     "dist",
+    "bunfig.toml",
     "LICENSE.md"
   ],
   "type": "module",
@@ -51,7 +52,8 @@
       "types": "./dist/presets/nextjs.d.ts",
       "default": "./dist/presets/nextjs.js"
     },
-    "./plugins/*": "./dist/*.js"
+    "./plugins/*": "./dist/*.js",
+    "./bunfig.toml": "./bunfig.toml"
   },
   "publishConfig": {
     "access": "public"
@@ -60,7 +62,8 @@
     "build": "bun build ./src/*.ts ./src/*/index.ts ./src/presets/*.ts --target=node --root=./src --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts src/presets/*.ts",
     "test": "bun run build && bun test ./test",
     "typecheck": "bun run build && tsc --noEmit",
-    "prepack": "bun run build"
+    "sync:bun": "bun ./scripts/sync-bunfig.ts && oxfmt --write bunfig.toml",
+    "prepack": "bun run build && bun run sync:bun"
   },
   "dependencies": {
     "@yopem/eslint-plugin": "workspace:*",
