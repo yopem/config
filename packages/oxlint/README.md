@@ -17,6 +17,37 @@ yarn add @yopem/oxlint-config
 bun add @yopem/oxlint-config
 ```
 
+## Bun lint templates
+
+Copy one generated template from `node_modules/@yopem/oxlint-config` to your
+project as `bunfig.toml`:
+
+| Template                            | Presets                                                    |
+| ----------------------------------- | ---------------------------------------------------------- |
+| `bunfig/base/bunfig.toml`           | Base                                                       |
+| `bunfig/effect/bunfig.toml`         | Base, Effect                                               |
+| `bunfig/react/bunfig.toml`          | Base, React                                                |
+| `bunfig/nextjs/bunfig.toml`         | Base, React, Next.js                                       |
+| `bunfig/react-native/bunfig.toml`   | Base, React Native                                         |
+| `bunfig/tanstack-start/bunfig.toml` | Base, React, TanStack Start                                |
+| `bunfig/full/bunfig.toml`           | Base, React, Next.js, React Native, TanStack Start, Effect |
+
+For example:
+
+```sh
+cp node_modules/@yopem/oxlint-config/bunfig/react/bunfig.toml ./bunfig.toml
+```
+
+The templates are in the `@yopem/oxlint-config` package. Bun must resolve
+`@yopem/eslint-plugin` and `eslint-plugin-oxfmt` from the project that uses the
+template. Bun and Oxlint can report different diagnostics for native rules. The
+full template combines framework rules; use a framework-specific template when
+those rules do not fit your project. Within a template, the listed presets apply
+from left to right. Later presets take precedence when rules overlap.
+
+Run `bun run --cwd packages/oxlint sync:bun` in this repository to regenerate
+the templates.
+
 ## Extend
 
 Add `oxlint.config.ts` to your project root:

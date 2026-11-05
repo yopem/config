@@ -1,4 +1,4 @@
-# Generated from the default Oxlint config. Run bun run sync:bun to update.
+# Generated from the base Oxlint config. Run bun run sync:bun to update.
 [lint]
 plugins = [
   "eslint-plugin-oxfmt",
