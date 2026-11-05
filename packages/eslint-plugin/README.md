@@ -6,7 +6,13 @@ config packages use the same rules and preset policies from this package.
 ## Install
 
 ```sh
-bun add -d @yopem/eslint-plugin
+npm install @yopem/eslint-plugin
+# or
+pnpm add @yopem/eslint-plugin
+# or
+yarn add @yopem/eslint-plugin
+# or
+bun add @yopem/eslint-plugin
 ```
 
 ## Bun lint
