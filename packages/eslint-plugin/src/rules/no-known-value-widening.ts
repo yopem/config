@@ -74,8 +74,7 @@ function hasKnownEvidence(
   const declarator = variableDeclarator(variable)
 
   if (
-    declarator === null ||
-    declarator.init === null ||
+    declarator?.init == null ||
     !isStableConstVariable(variable, declarator)
   ) {
     return false
@@ -107,7 +106,7 @@ function localFunctionForCall(
   if (unwrapped.type !== "Identifier") return null
   const variable = resolveVariable(sourceCode, unwrapped)
 
-  if (variable === null || variable.defs.length !== 1) return null
+  if (variable?.defs.length !== 1) return null
   const [definition] = variable.defs
 
   if (definition === undefined) return null
@@ -234,8 +233,7 @@ function hasKnownCallArgumentEvidence(
   const declarator = variableDeclarator(variable)
 
   if (
-    declarator === null ||
-    declarator.init === null ||
+    declarator?.init == null ||
     !isStableConstVariable(variable, declarator)
   ) {
     return false
@@ -435,7 +433,7 @@ export const noKnownValueWideningRule = defineRule({
         if (variable === null) return
         const declarator = variableDeclarator(variable)
 
-        if (declarator === null || declarator.id.type !== "Identifier") return
+        if (declarator?.id.type !== "Identifier") return
         reportFlow(
           node.right,
           targetFromAnnotation(declarator.id.typeAnnotation),

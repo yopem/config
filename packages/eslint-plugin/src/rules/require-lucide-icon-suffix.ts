@@ -18,16 +18,19 @@ export const rule = defineRule({
       ImportDeclaration(node) {
         if (node.source.value !== "lucide-react" || node.importKind === "type")
           return
+
         for (const specifier of node.specifiers) {
           if (
             specifier.type !== "ImportSpecifier" ||
             specifier.importKind === "type"
           )
             continue
+
           const importedName =
             specifier.imported.type === "Identifier"
               ? specifier.imported.name
               : specifier.imported.value
+
           if (
             /^[A-Z]/.test(importedName) &&
             importedName !== "IconNode" &&
