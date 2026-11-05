@@ -13,3 +13,14 @@
   - Refactored complex conditional statements for better readability.
   - Improved loop and function structures for maintainability.
   - Updated file paths in imports to use aliases for shared modules.
+
+## 0.0.1
+
+### Patch Changes
+
+- [`2895f83`](https://github.com/yopem/config/commit/2895f830a6f6a651747914201d590a6ab872614f)
+  Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(lint): share
+  custom lint rules
+
+  Add `@yopem/eslint-plugin` for ESLint, Oxlint, and Bun lint. Keep the
+  current rules and tests when resolving conflicts.
