@@ -1,5 +1,11 @@
 # @yopem/oxlint-config
 
+## 0.10.0
+
+### Minor Changes
+
+- [`61134ff`](https://github.com/yopem/config/commit/61134ff84ad9fa5ba64ff78673155859ce828ed4) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat: add more target for bunfig auto generated
+
 ## 0.9.0
 
 ### Minor Changes
