@@ -1,5 +1,17 @@
 # @yopem/eslint-plugin
 
+## 0.1.0
+
+### Minor Changes
+
+- [`03bc53f`](https://github.com/yopem/config/commit/03bc53f895f54ed6b9d75c8434531fc484c30277) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(eslint-plugin): add new array rules and remove test script
+  - Add `no-array-filter-existence` rule to disallow filtering arrays only
+    to check for a match.
+  - Add `no-array-sort-first` rule to disallow sorting arrays only to read
+    the first item.
+  - Update `baseRules` and `quality` to include the new rules.
+  - Remove the `test` script from `package.json`.
+
 ## 0.0.2
 
 ### Patch Changes

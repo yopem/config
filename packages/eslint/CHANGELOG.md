@@ -1,5 +1,13 @@
 # @yopem/eslint-config
 
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies
+  [[`03bc53f`](https://github.com/yopem/config/commit/03bc53f895f54ed6b9d75c8434531fc484c30277)]:
+  - @yopem/eslint-plugin@0.1.0
+
 ## 0.4.0
 
 ### Minor Changes
