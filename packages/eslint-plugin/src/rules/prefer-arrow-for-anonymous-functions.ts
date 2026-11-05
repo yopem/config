@@ -18,6 +18,7 @@ export const preferArrowForAnonymousFunctionsRule = defineRule({
         if (node.id || node.generator) return
 
         const parent = node.parent
+
         if (
           parent.type === "MethodDefinition" ||
           (parent.type === "Property" &&

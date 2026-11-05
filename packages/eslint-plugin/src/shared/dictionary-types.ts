@@ -152,8 +152,7 @@ function isEffectivelyEmptyInterface(
   const [type] = declarations
 
   return (
-    type !== undefined &&
-    type.extends.length === 0 &&
+    type?.extends.length === 0 &&
     (type.body.body.length === 0 ||
       type.body.body.every(isEffectivelyEmptyMember))
   )

@@ -155,26 +155,27 @@ function typesHaveSameSyntax(
 function isDefinitelyObjectType(type: ESTree.TSType): boolean {
   const unwrapped = unwrapTypeParentheses(type)
 
-  switch (unwrapped.type) {
-    case "TSArrayType":
-    case "TSConstructorType":
-    case "TSFunctionType":
-    case "TSMappedType":
-    case "TSObjectKeyword":
-    case "TSTupleType":
-      return true
-    case "TSTypeLiteral":
-      return unwrapped.members.length > 0
-    case "TSIntersectionType":
-      return unwrapped.types.every(isDefinitelyObjectType)
-    case "TSTypeOperator":
-      return (
-        unwrapped.operator === "readonly" &&
-        isDefinitelyObjectType(unwrapped.typeAnnotation)
-      )
-    default:
-      return false
+  if (
+    unwrapped.type === "TSArrayType" ||
+    unwrapped.type === "TSConstructorType" ||
+    unwrapped.type === "TSFunctionType" ||
+    unwrapped.type === "TSMappedType" ||
+    unwrapped.type === "TSObjectKeyword" ||
+    unwrapped.type === "TSTupleType"
+  ) {
+    return true
   }
+
+  if (unwrapped.type === "TSTypeLiteral") return unwrapped.members.length > 0
+
+  if (unwrapped.type === "TSIntersectionType")
+    return unwrapped.types.every(isDefinitelyObjectType)
+
+  return (
+    unwrapped.type === "TSTypeOperator" &&
+    unwrapped.operator === "readonly" &&
+    isDefinitelyObjectType(unwrapped.typeAnnotation)
+  )
 }
 
 function isDefinitelyNarrowerRecordType(type: ESTree.TSType): boolean {
@@ -310,8 +311,7 @@ function knownValueEvidence(
   const declarator = variableDeclarator(variable)
 
   if (
-    declarator === null ||
-    declarator.parent.type !== "VariableDeclaration" ||
+    declarator?.parent.type !== "VariableDeclaration" ||
     declarator.parent.kind !== "const" ||
     declarator.init === null ||
     variable.references.some(
@@ -342,8 +342,7 @@ function widenedBinding(
   const declarator = variableDeclarator(variable)
 
   if (
-    declarator === null ||
-    declarator.parent.type !== "VariableDeclaration" ||
+    declarator?.parent.type !== "VariableDeclaration" ||
     declarator.parent.kind !== "const" ||
     declarator.id.type !== "Identifier" ||
     declarator.init === null ||

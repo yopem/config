@@ -5,6 +5,13 @@ import type { EsTreeNode } from "oxlint-plugin-react-doctor"
 
 import { resolveVariable } from "./shared/scope.ts"
 
+function isNodeType<T extends string>(
+  node: EsTreeNode,
+  type: T,
+): node is EsTreeNode & Extract<EsTreeNode, { type: T }> {
+  return String(node.type) === type
+}
+
 function isStyleXProps(
   sourceCode: SourceCode,
   expression: ESTree.Expression,
@@ -132,10 +139,10 @@ const plugin: typeof upstream = {
           ...visitors,
           Program(node: EsTreeNode) {
             usesStyleX =
-              node.type === "Program" &&
+              isNodeType(node, "Program") &&
               node.body.some(
                 (statement) =>
-                  statement.type === "ImportDeclaration" &&
+                  isNodeType(statement, "ImportDeclaration") &&
                   statement.source.value === "@stylexjs/stylex",
               )
             visitors.Program?.(node)
@@ -143,8 +150,8 @@ const plugin: typeof upstream = {
           JSXAttribute(node: EsTreeNode) {
             if (
               usesStyleX &&
-              node.type === "JSXAttribute" &&
-              node.name.type === "JSXIdentifier" &&
+              isNodeType(node, "JSXAttribute") &&
+              isNodeType(node.name, "JSXIdentifier") &&
               node.name.name === "xstyle"
             )
               return

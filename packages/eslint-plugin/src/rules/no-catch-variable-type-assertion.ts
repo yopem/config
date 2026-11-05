@@ -1,8 +1,8 @@
 import { defineRule } from "@oxlint/plugins"
 import type { ESTree } from "@oxlint/plugins"
 
-import { getAssertionSource } from "../shared/assertion-source.ts"
-import { resolveVariable } from "../shared/scope.ts"
+import { getAssertionSource } from "@/shared/assertion-source"
+import { resolveVariable } from "@/shared/scope"
 
 export const noCatchVariableTypeAssertionRule = defineRule({
   meta: {
@@ -19,15 +19,20 @@ export const noCatchVariableTypeAssertionRule = defineRule({
   createOnce(context) {
     function check(node: ESTree.TSAsExpression | ESTree.TSTypeAssertion) {
       if (node.typeAnnotation.type === "TSUnknownKeyword") return
+
       const expression = getAssertionSource(node)
+
       if (expression.type !== "Identifier") return
+
       const variable = resolveVariable(context.sourceCode, expression)
+
       if (
         variable?.defs.some((definition) => definition.type === "CatchClause")
       ) {
         context.report({ node, messageId: "unvalidated" })
       }
     }
+
     return { TSAsExpression: check, TSTypeAssertion: check }
   },
 })

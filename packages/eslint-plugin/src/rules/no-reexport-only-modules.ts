@@ -16,30 +16,38 @@ export const noReexportOnlyModulesRule = defineRule({
       Program(node) {
         let hasReexport = false
         const importedNames = new Set<string>()
+
         for (const statement of node.body) {
           if (statement.type !== "ImportDeclaration") continue
+
           for (const specifier of statement.specifiers) {
             importedNames.add(specifier.local.name)
           }
         }
+
         for (const statement of node.body) {
           if (statement.type === "EmptyStatement") continue
+
           if (statement.type === "ImportDeclaration") {
             if (
               statement.specifiers.length === 0 &&
               statement.importKind !== "type"
             )
               return
+
             continue
           }
+
           if (
             statement.type === "ExportAllDeclaration" ||
             (statement.type === "ExportNamedDeclaration" &&
               statement.source !== null)
           ) {
             hasReexport = true
+
             continue
           }
+
           if (
             statement.type === "ExportNamedDeclaration" &&
             statement.declaration === null &&
@@ -50,10 +58,13 @@ export const noReexportOnlyModulesRule = defineRule({
             )
           ) {
             if (statement.specifiers.length > 0) hasReexport = true
+
             continue
           }
+
           return
         }
+
         if (hasReexport) {
           context.report({ node, messageId: "reexportOnly" })
         }

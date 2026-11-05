@@ -1,6 +1,7 @@
 import { defineRule, eslintCompatPlugin } from "@oxlint/plugins"
 import type { ESTree, SourceCode } from "@oxlint/plugins"
 
+import { isStringLiteral } from "./effect/shared/tagged-values.ts"
 import { rule as noQueryResultSpreadRule } from "./rules/no-query-result-spread.ts"
 import { rule as requireLucideIconSuffixRule } from "./rules/require-lucide-icon-suffix.ts"
 import { resolveArrayBinding } from "./shared/array-method.ts"
@@ -14,20 +15,25 @@ function restrictedHookName(
 
   function propertyName(node: ESTree.Node, computed: boolean) {
     if (!computed && node.type === "Identifier") return node.name
-    if (node.type === "Literal" && typeof node.value === "string")
-      return node.value
+
+    if (isStringLiteral(node)) return node.value
+
     if (node.type === "TemplateLiteral" && node.expressions.length === 0)
       return node.quasis[0]?.value.cooked ?? null
+
     return null
   }
 
   function origin(node: ESTree.Node): string | null {
     if (seen.has(node)) return null
     seen.add(node)
+
     if (node.type === "ChainExpression") return origin(node.expression)
+
     if (node.type === "MemberExpression") {
       const object = origin(node.object)
       const name = propertyName(node.property, node.computed)
+
       if (object === "react") {
         return name === "useCallback" ||
           name === "useEffect" ||
@@ -35,45 +41,55 @@ function restrictedHookName(
           ? name
           : null
       }
+
       return name === "call" || name === "apply" || name === "bind"
         ? object
         : null
     }
+
     if (node.type !== "Identifier") return null
     const variable = resolveArrayBinding(sourceCode, node)
+
     if (
-      !variable ||
-      variable.defs.length !== 1 ||
+      variable?.defs.length !== 1 ||
       variable.references.some(
         (reference) => reference.isWrite() && !reference.init,
       )
     )
       return null
     const definition = variable.defs[0]
+
     if (!definition) return null
     const binding = definition.node
+
     if (
       binding.type === "ImportSpecifier" ||
       binding.type === "ImportDefaultSpecifier" ||
       binding.type === "ImportNamespaceSpecifier"
     ) {
       const declaration = binding.parent
+
       if (
         declaration.type !== "ImportDeclaration" ||
         declaration.source.value !== "react" ||
         declaration.importKind === "type"
       )
         return null
+
       if (binding.type !== "ImportSpecifier") return "react"
+
       if (binding.importKind === "type") return null
       const name = propertyName(binding.imported, false)
+
       if (name === "default") return "react"
+
       return name === "useCallback" ||
         name === "useEffect" ||
         name === "useMemo"
         ? name
         : null
     }
+
     if (
       binding.type !== "VariableDeclarator" ||
       binding.parent.type !== "VariableDeclaration" ||
@@ -81,9 +97,12 @@ function restrictedHookName(
       binding.init === null
     )
       return null
+
     if (binding.id.type === "Identifier") return origin(binding.init)
+
     if (binding.id.type !== "ObjectPattern" || origin(binding.init) !== "react")
       return null
+
     for (const property of binding.id.properties) {
       if (
         property.type === "Property" &&
@@ -91,6 +110,7 @@ function restrictedHookName(
         property.value.name === node.name
       ) {
         const name = propertyName(property.key, property.computed)
+
         return name === "useCallback" ||
           name === "useEffect" ||
           name === "useMemo"
@@ -98,10 +118,12 @@ function restrictedHookName(
           : null
       }
     }
+
     return null
   }
 
   const name = origin(expression)
+
   return name === "useCallback" || name === "useEffect" || name === "useMemo"
     ? name
     : null
@@ -145,6 +167,7 @@ export default eslintCompatPlugin({
           hasReactEvidence = true
           let child: ESTree.Node = node
           let parent: ESTree.Node = node.parent
+
           while (parent.type !== "Program") {
             if (
               parent.type === "FunctionDeclaration" ||
@@ -152,8 +175,10 @@ export default eslintCompatPlugin({
               parent.type === "ArrowFunctionExpression"
             ) {
               if (child === parent.body) jsxFunctions.add(parent)
+
               return
             }
+
             child = parent
             parent = parent.parent
           }
@@ -205,6 +230,7 @@ export default eslintCompatPlugin({
           },
           ExportDefaultDeclaration(node) {
             const declaration = node.declaration
+
             if (
               declaration.type === "FunctionDeclaration" ||
               declaration.type === "FunctionExpression" ||
@@ -232,13 +258,17 @@ export default eslintCompatPlugin({
               )
                 context.report({ node, messageId: "declaration" })
             }
+
             for (const identifier of defaults) {
               const variable = resolveVariable(context.sourceCode, identifier)
+
               if (
                 variable?.defs.some((definition) => {
                   const node = definition.node
+
                   const fn =
                     node.type === "VariableDeclarator" ? node.init : node
+
                   return (
                     fn !== null &&
                     (fn.type === "FunctionDeclaration" ||
@@ -268,6 +298,7 @@ export default eslintCompatPlugin({
         return {
           ImportDeclaration(node) {
             if (node.source.value !== "react") return
+
             for (const specifier of node.specifiers) {
               if (
                 specifier.type !== "ImportSpecifier" ||
@@ -313,11 +344,14 @@ export default eslintCompatPlugin({
               return
             const hook = restrictedHookName(node.callee, context.sourceCode)
             const option = context.options?.[0]
+
             const restrictUseEffect =
+              // oxlint-disable-next-line quality/no-runtime-typeof -- Rule options can contain non-object values.
               typeof option === "object" &&
               option !== null &&
               !Array.isArray(option) &&
               option.restrictUseEffect === true
+
             if (hook && (hook !== "useEffect" || restrictUseEffect)) {
               context.report({ node, messageId: hook })
             }
