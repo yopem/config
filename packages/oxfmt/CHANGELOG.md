@@ -1,5 +1,17 @@
 # @yopem/oxfmt-config
 
+## 0.1.0
+
+### Minor Changes
+
+- [`2e627c0`](https://github.com/yopem/config/commit/2e627c0aa0f86380432eca0e825e3cc79a55c7f1) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxfmt): add Bun support and improve config exports
+  - Added Bun formatter support with a `bunfig.toml` template.
+  - Updated `README.md` with usage instructions for Bun and Oxfmt.
+  - Exported JSON, JavaScript config, and Bun template in `package.json`.
+  - Added scripts for building, syncing, and linting the package.
+  - Created TypeScript config and Bun sync script for consistency.
+  - Included tests to validate Bun formatting and package exports.
+
 ## 0.0.11
 
 ### Patch Changes
