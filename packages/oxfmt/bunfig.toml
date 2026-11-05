@@ -1,0 +1,45 @@
+# Generated from the Oxfmt config. Run bun run sync:bun to update.
+[fmt]
+bracketSpacing = true
+jsxSingleQuote = false
+printWidth = 80
+proseWrap = "always"
+semi = false
+singleQuote = false
+tabWidth = 2
+trailingComma = "all"
+ignorePatterns = [
+  "**/pnpm-lock.yaml",
+  "**/bun.lock",
+  "package-lock.json",
+  "yarn.lock",
+  "**/migrations/",
+  "**/AGENTS.md",
+]
+sortPackageJson = true
+
+[fmt.sortImports]
+newlinesBetween = true
+groups = [
+  "type-import",
+  [
+    "value-builtin",
+    "value-external",
+  ],
+  "type-internal",
+  "value-internal",
+  [
+    "type-parent",
+    "type-sibling",
+    "type-index",
+  ],
+  [
+    "value-parent",
+    "value-sibling",
+    "value-index",
+  ],
+  "unknown",
+]
+
+[fmt.sortTailwindcss]
+functions = ["cn", "cva", "clsx"]

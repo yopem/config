@@ -18,7 +18,9 @@
     "directory": "packages/oxfmt"
   },
   "files": [
-    "src/.oxfmtrc.json"
+    "src/.oxfmtrc.json",
+    "dist",
+    "bunfig.toml"
   ],
   "type": "module",
   "sideEffects": false,
@@ -26,13 +28,31 @@
   "module": "src/.oxfmtrc.json",
   "types": "src/.oxfmtrc.json",
   "exports": {
-    "default": "src/.oxfmtrc.json"
+    ".": "./src/.oxfmtrc.json",
+    "./oxfmtrc.json": "./src/.oxfmtrc.json",
+    "./config": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./bunfig.toml": "./bunfig.toml"
   },
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "bun build ./src/index.ts --target=node --outdir=dist --packages=external && tsc --declaration --emitDeclarationOnly --outDir dist --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck src/index.ts",
+    "sync:bun": "bun ./src/sync-bunfig.ts && oxfmt --write src/.oxfmtrc.json bunfig.toml",
+    "prepack": "bun run build && bun run sync:bun",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --config ../../oxlint.config.ts ."
+  },
   "dependencies": {
     "oxfmt": "^0.71.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "@types/node": "^26.6.5",
+    "oxlint": "1.76.0"
   },
   "peerDependencies": {
     "oxfmt": "^0.36.0 || ^0.60.0 || ^0.62.0 || ^0.63.0 || ^0.67.0 || ^0.71.0"
