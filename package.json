@@ -36,6 +36,7 @@
     "@yopem/oxlint-config": "*",
     "lefthook": "2.1.10",
     "oxfmt": "^0.71.0",
+    "oxlint-tsgolint": "^7.0.2005",
     "prettier": "3.6.2",
     "turbo": "2.10.6",
     "typescript": "5.9.3"
