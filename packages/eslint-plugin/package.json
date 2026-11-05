@@ -1,6 +1,6 @@
 {
   "name": "@yopem/eslint-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared Yopem rules for ESLint, Oxlint, and Bun lint.",
   "license": "MIT",
   "author": "Karyana Yandi <karyana@yandi.me>",
