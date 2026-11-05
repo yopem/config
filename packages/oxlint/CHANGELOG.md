@@ -1,5 +1,21 @@
 # @yopem/oxlint-config
 
+## 0.9.0
+
+### Minor Changes
+
+- [`dcad922`](https://github.com/yopem/config/commit/dcad922e74f71d54d047880f1e91242afcb777f4) Thanks [@karyanayandi](https://github.com/karyanayandi)! - feat(oxlint): add bunfig.toml and sync script
+  - Added `bunfig.toml` to define linting rules and configurations.
+  - Introduced `sync:bun` script to generate and update `bunfig.toml`.
+  - Updated `package.json` to include `bunfig.toml` in files and exports.
+  - Added tests to validate `bunfig.toml` synchronization and functionality.
+  - Enhanced README with new lint rules for arrays and sorting.
+
+### Patch Changes
+
+- Updated dependencies [[`03bc53f`](https://github.com/yopem/config/commit/03bc53f895f54ed6b9d75c8434531fc484c30277)]:
+  - @yopem/eslint-plugin@0.1.0
+
 ## 0.8.0
 
 ### Minor Changes
